@@ -115,13 +115,11 @@ export function BrandLogo({
 
   return (
     <span
-      className={cn("inline-flex items-center gap-3", className)}
+      className={cn("inline-flex items-center", className)}
       aria-label={brandName}
     >
-      <LogoIconImage size={40} priority={priority} className="sm:h-11 sm:w-11" />
-      <span className="text-xl font-bold tracking-tight text-academy-navy sm:text-[1.35rem]">
-        {brandName}
-      </span>
+      <LogoFullImage priority={priority} maxHeight={48} className="sm:max-h-[52px]" />
+      <span className="sr-only">{brandName}</span>
     </span>
   );
 }
