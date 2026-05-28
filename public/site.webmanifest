@@ -1,17 +1,25 @@
 {
-  "name": "Academigo",
+  "name": "Academigo — Nachhilfe & Lernplattform",
   "short_name": "Academigo",
-  "description": "Digitale Lernschule — persönlich, digital, individuell.",
+  "description": "Digitale Lernschule — persönliche Nachhilfe und Lernplattform in der Schweiz.",
   "start_url": "/de",
+  "scope": "/",
+  "lang": "de-CH",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b1f3a",
   "icons": [
     {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "/brand/logo-icon.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ]
 }

@@ -2,6 +2,15 @@ export const siteConfig = {
   brand: "Academigo",
   domain: "https://academigo.xyz",
 
+  seo: {
+    email: "omid@mathetogo.xyz",
+    telephone: "+41786936898",
+    sameAs: [
+      "https://platform.mathetogo.xyz",
+      "https://wa.me/41786936898",
+    ],
+  },
+
   links: {
     whatsapp: "https://wa.me/41786936898",
     platform: "https://platform.mathetogo.xyz",

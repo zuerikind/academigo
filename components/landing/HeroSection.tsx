@@ -88,15 +88,19 @@ export function HeroSection({
       <HeroBackground />
       <Container>
         {reducedMotion ? (
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <HeroCopy dict={dict} locale={locale} />
-            <div className="w-full lg:max-w-lg lg:justify-self-end">
-              <DashboardMockup variant="hero" dashboard={dict.dashboard} />
+            <div className="w-full lg:max-w-2xl lg:justify-self-end">
+              <DashboardMockup
+                variant="hero"
+                dashboard={dict.dashboard}
+                heroImageAlt={dict.meta.heroImageAlt}
+              />
             </div>
           </div>
         ) : (
           <motion.div
-            className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16"
+            className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16"
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
@@ -105,10 +109,14 @@ export function HeroSection({
               <HeroCopy dict={dict} locale={locale} />
             </motion.div>
             <motion.div
-              className="w-full lg:max-w-lg lg:justify-self-end"
+              className="w-full lg:max-w-2xl lg:justify-self-end"
               variants={fadeUp}
             >
-              <DashboardMockup variant="hero" dashboard={dict.dashboard} />
+              <DashboardMockup
+                variant="hero"
+                dashboard={dict.dashboard}
+                heroImageAlt={dict.meta.heroImageAlt}
+              />
             </motion.div>
           </motion.div>
         )}

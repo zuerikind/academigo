@@ -39,7 +39,7 @@ export function PlatformSection({
       centered={false}
       headerClassName="max-w-3xl"
     >
-      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="grid items-start gap-10 xl:grid-cols-[0.65fr_1.35fr] xl:gap-10">
         <div>
           <ul className="grid gap-4 sm:grid-cols-2">
             {dict.features.map((label, index) => {
@@ -64,7 +64,9 @@ export function PlatformSection({
             </Button>
           </div>
         </div>
-        <DashboardMockup variant="platform" dashboard={dashboard} />
+        <div className="w-full xl:justify-self-end">
+          <DashboardMockup variant="platform" dashboard={dashboard} />
+        </div>
       </div>
     </Section>
   );

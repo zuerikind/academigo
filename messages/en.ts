@@ -16,8 +16,16 @@ export const en = {
       "Matura exam preparation",
       "Learning platform tutoring",
     ],
+    category: "Education, Tutoring, Learning platform",
     ogTitle: "Academigo — Tutoring & Learning Platform | Switzerland",
+    ogTagline: "Personal tutoring · Digital learning platform",
+    ogSubjects: "Math · Physics · Chemistry · Switzerland",
+    ogCta: "Free consultation",
+    ogImageAlt:
+      "Academigo — tutoring and learning platform for math, physics, and chemistry in Switzerland",
     twitterTitle: "Academigo — Tutoring & Learning Platform",
+    heroImageAlt:
+      "Academigo student dashboard showing learning progress, XP, tasks, and notes",
     footerSeo:
       "Online tutoring & in-person tutoring in Switzerland — mathematics, physics, chemistry.",
   },
@@ -324,6 +332,7 @@ export const en = {
     subjectsLabel: "Subjects",
     progressLabel: "Progress",
     welcomeBack: "Welcome back",
+    galleryTitle: "Platform insights",
     stats: [
       { label: "Exercises", value: "24" },
       { label: "Quizzes", value: "8" },
@@ -342,5 +351,39 @@ export const en = {
       { topic: "Functions", pct: 45 },
     ],
     subjectList: ["Mathematics", "Physics", "Chemistry"],
+    tabs: [
+      {
+        id: "overview",
+        title: "Overview",
+        description:
+          "A complete view of progress, XP, and open tasks in one place.",
+        imageAlt:
+          "Academigo dashboard overview with learning progress, XP, and open tasks",
+      },
+      {
+        id: "quiz",
+        title: "Quiz",
+        description:
+          "Interactive quiz questions with instant feedback and exam-focused practice.",
+        imageAlt:
+          "Academigo quiz view with interactive math questions and feedback",
+      },
+      {
+        id: "aufgaben",
+        title: "Exercises",
+        description:
+          "Structured exercise library by topic and difficulty level.",
+        imageAlt:
+          "Academigo exercises view with math topics and learning progress",
+      },
+      {
+        id: "leaderboard",
+        title: "Badges",
+        description:
+          "Leaderboard and badges to boost motivation and track measurable progress.",
+        imageAlt:
+          "Academigo leaderboard and student achievement badges",
+      },
+    ],
   },
 } as const;

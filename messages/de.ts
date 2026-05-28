@@ -16,8 +16,16 @@ export const de = {
       "Maturavorbereitung",
       "Lernplattform Nachhilfe",
     ],
+    category: "Bildung, Nachhilfe, Lernplattform",
     ogTitle: "Academigo — Nachhilfe & Lernplattform | Schweiz",
+    ogTagline: "Persönliche Nachhilfe · Digitale Lernplattform",
+    ogSubjects: "Mathematik · Physik · Chemie · Schweiz",
+    ogCta: "Kostenlose Beratung",
+    ogImageAlt:
+      "Academigo — Nachhilfe und Lernplattform für Mathematik, Physik und Chemie in der Schweiz",
     twitterTitle: "Academigo — Nachhilfe & Lernplattform",
+    heroImageAlt:
+      "Academigo Schüler-Dashboard mit Lernfortschritt, XP, Aufgaben und Notizen",
     footerSeo:
       "Online Nachhilfe & Vor-Ort Nachhilfe in der Schweiz — Mathematik, Physik, Chemie.",
   },
@@ -325,6 +333,7 @@ export const de = {
     subjectsLabel: "Fächer",
     progressLabel: "Fortschritt",
     welcomeBack: "Willkommen zurück",
+    galleryTitle: "Plattform-Einblicke",
     stats: [
       { label: "Aufgaben", value: "24" },
       { label: "Quiz", value: "8" },
@@ -343,5 +352,39 @@ export const de = {
       { topic: "Funktionen", pct: 45 },
     ],
     subjectList: ["Mathematik", "Physik", "Chemie"],
+    tabs: [
+      {
+        id: "overview",
+        title: "Übersicht",
+        description:
+          "Gesamter Lernfortschritt, XP und offene Aufgaben auf einen Blick.",
+        imageAlt:
+          "Academigo Dashboard Übersicht mit Lernfortschritt, XP und offenen Aufgaben",
+      },
+      {
+        id: "quiz",
+        title: "Quiz",
+        description:
+          "Interaktive Quiz-Fragen mit sofortigem Feedback und klarer Prüfungsvorbereitung.",
+        imageAlt:
+          "Academigo Quiz-Ansicht mit interaktiven Mathematikfragen und Feedback",
+      },
+      {
+        id: "aufgaben",
+        title: "Aufgaben",
+        description:
+          "Strukturierte Aufgabenbibliothek nach Themen und Schwierigkeitsgrad.",
+        imageAlt:
+          "Academigo Aufgabenbereich mit Mathematik-Themen und Lernfortschritt",
+      },
+      {
+        id: "leaderboard",
+        title: "Abzeichen",
+        description:
+          "Bestenliste und Abzeichen für Motivation und messbaren Fortschritt.",
+        imageAlt:
+          "Academigo Bestenliste und Abzeichen für Schülerfortschritt",
+      },
+    ],
   },
 } as const;

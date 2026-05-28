@@ -7,11 +7,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://academigo.xyz"),
   manifest: "/site.webmanifest",
   appleWebApp: {
     capable: true,
     title: "Academigo",
     statusBarStyle: "default",
+  },
+  formatDetection: {
+    telephone: false,
   },
 };
 
@@ -29,6 +33,7 @@ export default function RootLayout({
   return (
     <html
       className={`${plusJakarta.variable} h-full scroll-smooth`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body
