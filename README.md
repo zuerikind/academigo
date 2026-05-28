@@ -13,6 +13,7 @@ Logo-Dateien liegen unter [`public/brand/`](public/brand/):
 
 Zum Aktualisieren: Dateien ersetzen, gleiche Dateinamen beibehalten. [`app/icon.png`](app/icon.png) und [`app/apple-icon.png`](app/apple-icon.png) sind Kopien des Icons für den Browser-Tab und iOS (bei Icon-Wechsel ebenfalls kopieren oder per Build-Skript synchronisieren).
 
+## Stack
 
 - Next.js (App Router)
 - TypeScript
@@ -45,6 +46,29 @@ CTAs (WhatsApp, Plattform, Beratung) in `config/site.ts`.
 ```bash
 npm run build
 npm run lint
+```
+
+## Deploy auf Vercel
+
+Dieses Projekt ist bereit für Vercel (keine zusätzlichen Environment-Variablen erforderlich).
+
+1. Repo auf GitHub verbunden lassen (`main`).
+2. In Vercel: **Add New Project** -> `academigo` importieren.
+3. Framework: **Next.js** (wird automatisch erkannt).
+4. Build Command: `npm run build` (Default ok).
+5. Output: `.next` (Default ok).
+6. Deploy klicken.
+
+Optional via CLI:
+
+```bash
+npx vercel
+```
+
+Für Production:
+
+```bash
+npx vercel --prod
 ```
 
 ## Geplante Erweiterungen
