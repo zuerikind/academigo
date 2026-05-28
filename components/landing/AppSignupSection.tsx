@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/Button";
+import Link from "next/link";
+import { SignUpCtaGroup } from "@/components/layout/SignUpCtaGroup";
 import { Container } from "@/components/ui/Container";
-import { appLoginUrl, appSignupUrl } from "@/lib/app-links";
+import { appLoginUrl } from "@/lib/app-links";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/messages/types";
 
@@ -14,50 +15,40 @@ export function AppSignupSection({
   return (
     <section
       id="app"
-      className="border-y border-academy-line bg-[color:var(--brand-tint)]"
+      className="scroll-mt-20 bg-white py-14 sm:py-16"
       aria-labelledby="app-signup-heading"
     >
       <Container>
-        <div className="flex flex-col items-start justify-between gap-8 py-12 sm:flex-row sm:items-center sm:py-14">
-          <div className="max-w-xl">
-            <p className="text-meta-brand">{dict.eyebrow}</p>
-            <h2
-              id="app-signup-heading"
-              className="text-heading mt-3 text-academy-navy"
-            >
-              {dict.title}
-            </h2>
-            <p className="text-lead mt-3">{dict.description}</p>
-          </div>
-          <div className="flex w-full flex-col gap-3 sm:w-auto sm:min-w-[280px]">
-            <Button
-              href={appSignupUrl(locale, "student")}
-              external
-              variant="accent"
-              size="lg"
-              fullWidth
-            >
-              {dict.signUpStudent}
-            </Button>
-            <Button
-              href={appSignupUrl(locale, "teacher")}
-              external
-              variant="secondary"
-              size="lg"
-              fullWidth
-            >
-              {dict.signUpTeacher}
-            </Button>
-            <Button
-              href={appLoginUrl(locale)}
-              external
-              variant="ghost"
-              size="sm"
-              fullWidth
-              className="text-[color:var(--brand-deep)]"
-            >
-              {dict.signIn}
-            </Button>
+        <div className="overflow-hidden rounded-2xl border border-academy-line bg-[color:var(--brand-tint)]/50 shadow-card">
+          <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-12">
+            <div>
+              <p className="text-meta-brand">{dict.eyebrow}</p>
+              <h2
+                id="app-signup-heading"
+                className="text-heading mt-3 text-academy-navy"
+              >
+                {dict.title}
+              </h2>
+              <p className="text-lead mt-3 max-w-lg">{dict.description}</p>
+              <p className="mt-4">
+                <Link
+                  href={appLoginUrl(locale)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-[color:var(--brand-deep)] link-underline"
+                >
+                  {dict.signIn}
+                </Link>
+              </p>
+            </div>
+            <SignUpCtaGroup
+              locale={locale}
+              labels={{
+                student: dict.signUpStudent,
+                teacher: dict.signUpTeacher,
+              }}
+              vertical
+            />
           </div>
         </div>
       </Container>

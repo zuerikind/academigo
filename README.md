@@ -83,6 +83,8 @@ Das ist meist **kein** Next.js-404, sondern Vercel findet **keine Deployment-Aus
 
 Nach Einstellungsänderungen: **Redeploy** (Deployments → … → Redeploy).
 
+**App sign-up links:** Set `NEXT_PUBLIC_APP_ORIGIN` in Vercel to your live app URL (e.g. `https://www.app.academigo.xyz`). Without a working app deployment, registration buttons will 404.
+
 Optional via CLI:
 
 ```bash

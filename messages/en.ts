@@ -39,8 +39,10 @@ export const en = {
     buttons: {
       freeConsultation: "Free consultation",
       viewPricing: "View pricing",
-      signUpStudent: "Sign up as student",
-      signUpTeacher: "Sign up as teacher",
+      signUpStudent: "Students & parents sign up",
+      signUpTeacher: "Teachers sign up",
+      signUpStudentShort: "Students",
+      signUpTeacherShort: "Teachers",
       signIn: "Sign in",
       inquire: "Inquire",
       start: "Get started",
@@ -59,10 +61,10 @@ export const en = {
   },
 
   nav: [
-    { label: "Platform", href: "#app" },
+    { label: "Sign up", href: "#app" },
     { label: "System", href: "#system" },
     { label: "Subjects", href: "#subjects" },
-    { label: "Platform", href: "#platform" },
+    { label: "Insights", href: "#platform" },
     { label: "Services", href: "#services" },
     { label: "Pricing", href: "#pricing" },
     { label: "Process", href: "#process" },
@@ -84,8 +86,8 @@ export const en = {
     title: "Get started on the platform",
     description:
       "Students and parents find the right teachers. Teachers can register and offer tutoring.",
-    signUpStudent: "Student registration",
-    signUpTeacher: "Teacher registration",
+    signUpStudent: "Students & parents — create account",
+    signUpTeacher: "Teachers — create account",
     signIn: "Already have an account? Sign in",
   },
 

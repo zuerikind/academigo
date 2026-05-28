@@ -1,10 +1,14 @@
 import { siteConfig } from "@/config/site";
 import type { Locale } from "@/lib/i18n/config";
 
+function appOrigin() {
+  return siteConfig.links.appOrigin.replace(/\/$/, "");
+}
+
 export function appSignupUrl(locale: Locale, role: "student" | "teacher") {
-  return `${siteConfig.links.appOrigin}/${locale}/signup?role=${role}`;
+  return `${appOrigin()}/${locale}/signup?role=${role}`;
 }
 
 export function appLoginUrl(locale: Locale) {
-  return `${siteConfig.links.appOrigin}/${locale}/login`;
+  return `${appOrigin()}/${locale}/login`;
 }

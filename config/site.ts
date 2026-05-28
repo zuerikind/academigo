@@ -12,7 +12,9 @@ export const siteConfig = {
   },
 
   links: {
-    appOrigin: "https://app.academigo.xyz",
+    /** App (marketplace). Override with NEXT_PUBLIC_APP_ORIGIN in Vercel. */
+    appOrigin:
+      process.env.NEXT_PUBLIC_APP_ORIGIN ?? "https://www.app.academigo.xyz",
     whatsapp: "https://wa.me/41786936898",
     platform: "https://platform.mathetogo.xyz",
     consultation: "https://wa.me/41786936898",

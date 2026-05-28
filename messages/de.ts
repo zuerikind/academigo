@@ -39,8 +39,10 @@ export const de = {
     buttons: {
       freeConsultation: "Kostenlose Beratung",
       viewPricing: "Preise ansehen",
-      signUpStudent: "Für Schüler/innen registrieren",
-      signUpTeacher: "Als Lehrperson registrieren",
+      signUpStudent: "Schüler/Eltern registrieren",
+      signUpTeacher: "Lehrperson registrieren",
+      signUpStudentShort: "Schüler/Eltern",
+      signUpTeacherShort: "Lehrperson",
       signIn: "Anmelden",
       inquire: "Anfragen",
       start: "Starten",
@@ -59,10 +61,10 @@ export const de = {
   },
 
   nav: [
-    { label: "Plattform", href: "#app" },
+    { label: "Registrieren", href: "#app" },
     { label: "System", href: "#system" },
     { label: "Fächer", href: "#subjects" },
-    { label: "Plattform", href: "#platform" },
+    { label: "Einblicke", href: "#platform" },
     { label: "Angebote", href: "#services" },
     { label: "Preise", href: "#pricing" },
     { label: "Ablauf", href: "#process" },
@@ -84,8 +86,8 @@ export const de = {
     title: "Direkt auf der Plattform starten",
     description:
       "Schüler/innen und Eltern finden passende Lehrpersonen. Lehrpersonen können sich registrieren und Nachhilfe anbieten.",
-    signUpStudent: "Registrierung Schüler/in",
-    signUpTeacher: "Registrierung Lehrperson",
+    signUpStudent: "Schüler/Eltern — Konto erstellen",
+    signUpTeacher: "Lehrperson — Konto erstellen",
     signIn: "Bereits Konto? Anmelden",
   },
 

@@ -7,16 +7,21 @@ import { cn } from "@/lib/utils";
 export function LanguageSwitcher({
   locale,
   ariaLabel,
+  className,
 }: {
   locale: Locale;
   ariaLabel: string;
+  className?: string;
 }) {
   const hash =
     typeof window !== "undefined" ? window.location.hash : "";
 
   return (
     <div
-      className="flex items-center gap-1 rounded-full border border-academy-mist-dark bg-academy-mist p-1"
+      className={cn(
+        "flex shrink-0 items-center gap-1 rounded-full border border-academy-line bg-academy-paper-soft p-1",
+        className,
+      )}
       role="group"
       aria-label={ariaLabel}
     >
