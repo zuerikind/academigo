@@ -288,6 +288,7 @@ export const de = {
   },
 
   process: {
+    eyebrow: "Ablauf",
     title: "So funktioniert Academigo",
     steps: [
       {

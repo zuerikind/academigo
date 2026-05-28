@@ -88,7 +88,7 @@ function PlatformScreenshots({ dashboard }: { dashboard: Dictionary["dashboard"]
   );
 
   return (
-    <div className="rounded-3xl border border-academy-mist-dark/80 bg-white p-4 shadow-xl shadow-academy-navy/15 sm:p-6">
+    <div className="rounded-2xl border border-academy-line bg-white p-4 shadow-card sm:p-5">
       <div className="mb-5">
         <p className="text-sm font-semibold uppercase tracking-wide text-academy-slate">
           {dashboard.galleryTitle}

@@ -16,44 +16,41 @@ export function PricingSection({ dict }: { dict: Dictionary }) {
   });
 
   return (
-    <Section id="pricing" title={pricing.title} variant="white">
-      <AnimatedGrid className="grid gap-8 lg:grid-cols-3">
+    <Section id="pricing" title={pricing.title} variant="paper">
+      <AnimatedGrid className="grid gap-6 lg:grid-cols-3">
         {plans.map((plan) => (
           <AnimatedItem key={plan.id}>
             <Card
               highlight={plan.highlight}
               className={cn(
                 "flex h-full flex-col",
-                plan.highlight && "relative scale-[1.02] lg:-mt-2 lg:mb-2",
+                plan.highlight && "relative z-[1] lg:-mt-1 lg:mb-1",
               )}
             >
               {plan.highlight && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-academy-gold px-4 py-1 text-xs font-bold uppercase text-academy-navy">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[color:var(--brand)] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-white shadow-soft">
                   {common.popular}
                 </span>
               )}
-              <h3 className="text-xl font-bold text-academy-navy">{plan.name}</h3>
-              <p className="mt-4">
-                <span className="text-4xl font-bold text-academy-navy">
-                  CHF {plan.priceChf}
-                </span>
+              <h3 className="text-subheading text-academy-navy">{plan.name}</h3>
+              <p className="mt-4 font-display text-4xl font-semibold tracking-tight text-academy-navy text-numeric">
+                CHF {plan.priceChf}
               </p>
               {plan.perLessonChf && (
-                <p className="mt-1 text-sm font-medium text-academy-gold">
+                <p className="mt-1 text-sm font-medium text-[color:var(--brand-deep)]">
                   CHF {plan.perLessonChf} {common.perLesson}
                 </p>
               )}
-              <p className="mt-2 text-sm text-academy-slate">
+              <p className="text-caption mt-2">
                 {plan.durationMin} {common.minutes}
               </p>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-academy-slate">
-                {plan.description}
-              </p>
+              <p className="text-body mt-4 flex-1">{plan.description}</p>
               <Button
                 href={siteConfig.links.consultation}
                 external
                 variant={plan.highlight ? "accent" : "primary"}
-                className="mt-6 w-full"
+                size="lg"
+                className="mt-8 w-full"
               >
                 {plan.cta}
               </Button>
@@ -62,26 +59,29 @@ export function PricingSection({ dict }: { dict: Dictionary }) {
         ))}
       </AnimatedGrid>
 
-      <div className="mt-10 rounded-3xl border border-academy-mist-dark bg-academy-mist p-6 sm:flex sm:items-center sm:justify-between sm:p-8">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-wide text-academy-gold">
-            {pricing.platformLabel}
-          </p>
-          <p className="mt-2 text-2xl font-bold text-academy-navy">
-            CHF {pricingAmounts.platform.priceChf} / {pricing.platform.period}
-          </p>
-          <p className="mt-2 text-sm text-academy-slate">
-            {pricing.platform.description}
-          </p>
+      <div className="mt-10 overflow-hidden rounded-2xl border border-[color:var(--brand)]/20 bg-gradient-to-br from-[color:var(--brand-tint)] via-white to-white shadow-card">
+        <div className="flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+          <div className="max-w-lg">
+            <p className="text-meta-brand">{pricing.platformLabel}</p>
+            <p className="font-display mt-3 text-3xl font-semibold tracking-tight text-academy-navy text-numeric sm:text-4xl">
+              CHF {pricingAmounts.platform.priceChf}
+              <span className="text-lg font-medium text-academy-slate">
+                {" "}
+                / {pricing.platform.period}
+              </span>
+            </p>
+            <p className="text-body mt-3">{pricing.platform.description}</p>
+          </div>
+          <Button
+            href={siteConfig.links.platform}
+            external
+            variant="accent"
+            size="lg"
+            className="shrink-0 sm:min-w-[200px]"
+          >
+            {common.buttons.viewPlatform}
+          </Button>
         </div>
-        <Button
-          href={siteConfig.links.platform}
-          external
-          variant="secondary"
-          className="mt-4 shrink-0 sm:mt-0"
-        >
-          {common.buttons.viewPlatform}
-        </Button>
       </div>
     </Section>
   );

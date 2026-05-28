@@ -1,5 +1,6 @@
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
+import { IconBox } from "@/components/ui/IconBox";
 import { DashboardMockup } from "@/components/ui/DashboardMockup";
 import { siteConfig } from "@/config/site";
 import {
@@ -37,34 +38,40 @@ export function PlatformSection({
       subtitle={dict.subtitle}
       variant="white"
       centered={false}
-      headerClassName="max-w-3xl"
+      headerClassName="max-w-2xl text-left sm:text-left"
     >
-      <div className="grid items-start gap-10 xl:grid-cols-[0.65fr_1.35fr] xl:gap-10">
+      <div className="grid items-start gap-10 xl:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] xl:gap-12">
         <div>
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <ul className="grid gap-3 sm:grid-cols-2">
             {dict.features.map((label, index) => {
               const Icon = featureIcons[index];
               return (
                 <li
                   key={label}
-                  className="flex items-center gap-3 rounded-2xl border border-academy-mist-dark bg-academy-mist/50 px-4 py-3"
+                  className="flex items-center gap-3 rounded-xl border border-academy-line bg-academy-paper-soft px-4 py-3.5 transition-colors hover:border-[color:var(--brand)]/25 hover:bg-white"
                 >
-                  <Icon
-                    className="h-5 w-5 shrink-0 text-academy-gold"
-                    aria-hidden
-                  />
-                  <span className="font-medium text-academy-navy">{label}</span>
+                  <IconBox size="sm">
+                    <Icon strokeWidth={1.75} aria-hidden />
+                  </IconBox>
+                  <span className="text-sm font-medium text-academy-navy">
+                    {label}
+                  </span>
                 </li>
               );
             })}
           </ul>
           <div className="mt-8">
-            <Button href={siteConfig.links.platform} external variant="primary">
+            <Button
+              href={siteConfig.links.platform}
+              external
+              variant="accent"
+              size="lg"
+            >
               {buttons.testPlatform}
             </Button>
           </div>
         </div>
-        <div className="w-full xl:justify-self-end">
+        <div className="w-full min-w-0 xl:justify-self-stretch">
           <DashboardMockup variant="platform" dashboard={dashboard} />
         </div>
       </div>

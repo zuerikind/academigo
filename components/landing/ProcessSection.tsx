@@ -8,7 +8,12 @@ export function ProcessSection({
   dict: Dictionary["process"];
 }) {
   return (
-    <Section id="process" title={dict.title} variant="mist">
+    <Section
+      id="process"
+      title={dict.title}
+      variant="white"
+      eyebrow={dict.eyebrow}
+    >
       <ProcessTimeline steps={dict.steps} />
     </Section>
   );

@@ -12,66 +12,72 @@ export function ProcessTimeline({
 }) {
   const reducedMotion = useReducedMotion();
 
-  if (reducedMotion) {
-    return (
-      <ol className="grid gap-8 md:grid-cols-4">
-        {steps.map((step, index) => (
-          <li key={step.title} className="relative text-center">
-            <StepCard step={step} number={index + 1} />
-          </li>
-        ))}
-      </ol>
-    );
-  }
+  const grid = (
+    <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+      {steps.map((step, index) => (
+        <li key={step.title}>
+          <StepCard step={step} number={index + 1} isLast={index === steps.length - 1} />
+        </li>
+      ))}
+    </ol>
+  );
+
+  if (reducedMotion) return grid;
 
   return (
-    <motion.ol
-      className="relative grid gap-10 md:grid-cols-4 md:gap-6"
+    <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-60px" }}
       variants={staggerContainer}
     >
-      <motion.div
-        className="absolute left-0 right-0 top-8 hidden h-0.5 origin-left bg-academy-mist-dark md:block"
-        variants={{
-          hidden: { scaleX: 0 },
-          visible: { scaleX: 1, transition: { duration: 1, delay: 0.2 } },
-        }}
-        aria-hidden
-      />
-      {steps.map((step, index) => (
-        <motion.li key={step.title} className="relative" variants={fadeUp}>
-          <StepCard step={step} number={index + 1} animated />
-        </motion.li>
-      ))}
-    </motion.ol>
+      <motion.ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5" variants={staggerContainer}>
+        {steps.map((step, index) => (
+          <motion.li key={step.title} variants={fadeUp}>
+            <StepCard
+              step={step}
+              number={index + 1}
+              isLast={index === steps.length - 1}
+            />
+          </motion.li>
+        ))}
+      </motion.ol>
+    </motion.div>
   );
 }
 
 function StepCard({
   step,
   number,
-  animated,
+  isLast,
 }: {
   step: Dictionary["process"]["steps"][number];
   number: number;
-  animated?: boolean;
+  isLast: boolean;
 }) {
   return (
-    <div className="flex flex-col items-center text-center">
-      <div
-        className={cn(
-          "relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--brand-deep)] text-lg font-bold text-white shadow-card",
-          animated && "ring-4 ring-[color:var(--brand)]/25",
-        )}
-      >
-        {number}
+    <div
+      className={cn(
+        "relative flex h-full flex-col rounded-2xl border border-academy-line bg-white p-6 shadow-card",
+        "lg:pt-8",
+      )}
+    >
+      {!isLast && (
+        <span
+          className="absolute -right-3 top-9 hidden h-0.5 w-6 bg-[color:var(--brand)]/35 lg:block"
+          aria-hidden
+        />
+      )}
+      <div className="flex items-center gap-3">
+        <span
+          className="font-display flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[color:var(--brand-deep)] text-lg font-bold text-white shadow-[var(--shadow-button)]"
+          aria-hidden
+        >
+          {number}
+        </span>
       </div>
-      <h3 className="mt-5 text-lg font-semibold text-academy-navy">{step.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-academy-slate">
-        {step.description}
-      </p>
+      <h3 className="text-subheading mt-5 text-academy-navy">{step.title}</h3>
+      <p className="text-body mt-2">{step.description}</p>
     </div>
   );
 }

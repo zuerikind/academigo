@@ -287,6 +287,7 @@ export const en = {
   },
 
   process: {
+    eyebrow: "Process",
     title: "How Academigo works",
     steps: [
       {

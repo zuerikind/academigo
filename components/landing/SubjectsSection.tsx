@@ -14,8 +14,8 @@ export function SubjectsSection({
 }) {
   return (
     <Section id="subjects" title={dict.title} variant="mist">
-      <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
-        <AnimatedGrid className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-8 lg:grid-cols-[1fr_300px] lg:gap-10">
+        <AnimatedGrid className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {dict.active.map((subject) => (
             <AnimatedItem key={subject.id}>
               <SubjectCard
@@ -28,23 +28,23 @@ export function SubjectsSection({
         </AnimatedGrid>
 
         <AnimatedItem>
-          <div className="h-full rounded-3xl border border-academy-mist-dark bg-white p-6 shadow-lg sm:p-8">
+          <aside className="flex h-full flex-col rounded-2xl border border-dashed border-[color:var(--brand)]/30 bg-[color:var(--brand-tint)]/40 p-6 sm:p-7">
             <Badge>{common.comingSoon}</Badge>
-            <p className="mt-4 text-lg font-semibold text-academy-navy">
+            <p className="text-subheading mt-5 text-academy-navy">
               {dict.expansionNote}
             </p>
-            <p className="mt-2 text-sm text-academy-slate">{dict.plannedLabel}</p>
-            <ul className="mt-4 flex flex-wrap gap-2">
+            <p className="text-caption mt-2">{dict.plannedLabel}</p>
+            <ul className="mt-5 flex flex-wrap gap-2">
               {dict.comingSoon.map((name) => (
                 <li
                   key={name}
-                  className="rounded-xl bg-academy-mist px-3 py-1.5 text-sm font-medium text-academy-slate"
+                  className="rounded-lg border border-academy-line bg-white px-3 py-1.5 text-sm font-medium text-academy-slate"
                 >
                   {name}
                 </li>
               ))}
             </ul>
-          </div>
+          </aside>
         </AnimatedItem>
       </div>
     </Section>

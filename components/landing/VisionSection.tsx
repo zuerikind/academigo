@@ -8,11 +8,15 @@ export function VisionSection({
 }) {
   return (
     <Section id="vision" title={dict.title} variant="brand">
-      <div className="mx-auto max-w-3xl space-y-6 text-center text-lg leading-relaxed text-white/85">
+      <div className="mx-auto max-w-2xl space-y-6 text-center">
         {dict.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <p key={paragraph} className="text-lg leading-relaxed text-white/80">
+            {paragraph}
+          </p>
         ))}
-        <p className="text-subheading text-white/90">{dict.goal}</p>
+        <p className="font-display text-xl font-semibold tracking-tight text-white sm:text-2xl">
+          {dict.goal}
+        </p>
       </div>
     </Section>
   );
