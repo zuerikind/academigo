@@ -32,7 +32,10 @@ function HeroCopy({
       />
 
       <p className="text-meta-brand inline-flex items-center gap-2.5">
-        <span aria-hidden className="h-px w-6 bg-brand/50" />
+        <span
+          aria-hidden
+          className="h-px w-6 bg-[color-mix(in_srgb,var(--brand)_50%,transparent)]"
+        />
         {hero.eyebrow}
       </p>
       <h1 className="text-hero mt-5 text-academy-navy">{hero.title}</h1>

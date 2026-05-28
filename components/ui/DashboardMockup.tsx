@@ -49,7 +49,7 @@ export function DashboardMockup({
         <HeroScreenshot alt={heroImageAlt ?? dashboard.galleryTitle} />
       )}
       <div
-        className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-brand/10 blur-3xl"
+        className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-[color-mix(in_srgb,var(--brand)_10%,transparent)] blur-3xl"
         aria-hidden
       />
     </motion.div>
@@ -101,8 +101,8 @@ function PlatformScreenshots({ dashboard }: { dashboard: Dictionary["dashboard"]
             className={cn(
               "min-h-10 shrink-0 rounded-full border px-3 py-2 text-center text-xs font-semibold leading-tight transition-colors sm:px-4 sm:text-sm",
               activeTab === tab.id
-                ? "border-brand-deep bg-brand-deep text-white shadow-md"
-                : "border-academy-line bg-white text-academy-navy hover:border-brand/40 hover:bg-brand-tint",
+                ? "border-ink-brand-deep bg-fill-brand-deep text-on-brand shadow-md"
+                : "border-academy-line bg-white text-academy-navy hover:border-[color-mix(in_srgb,var(--brand)_40%,transparent)] hover:bg-fill-brand-tint",
             )}
           >
             {tab.title}

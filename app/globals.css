@@ -341,3 +341,53 @@ body {
   opacity: 0;
   transform: translateY(12px);
 }
+
+/* =========================================================================
+   Brand fills — explicit CSS so CTAs never render as white-on-white
+   (Tailwind bg-brand* utilities were not always emitted in this setup)
+   ========================================================================= */
+@layer components {
+  .bg-fill-brand {
+    background-color: var(--brand);
+  }
+  .bg-fill-brand-deep {
+    background-color: var(--brand-deep);
+  }
+  .bg-fill-brand-tint {
+    background-color: var(--brand-tint);
+  }
+  .text-on-brand {
+    color: #ffffff;
+  }
+  .text-ink-brand-deep {
+    color: var(--brand-deep);
+  }
+  .border-ink-brand {
+    border-color: var(--brand);
+  }
+  .border-ink-brand-deep {
+    border-color: var(--brand-deep);
+  }
+
+  .btn-cta-accent {
+    background-color: var(--brand);
+    color: #ffffff;
+    border-color: var(--brand);
+  }
+  .btn-cta-accent:hover {
+    background-color: var(--brand-deep);
+    border-color: var(--brand-deep);
+    color: #ffffff;
+  }
+
+  .btn-cta-primary {
+    background-color: var(--brand-deep);
+    color: #ffffff;
+    border-color: var(--brand-deep);
+  }
+  .btn-cta-primary:hover {
+    background-color: var(--academy-navy);
+    border-color: var(--academy-navy);
+    color: #ffffff;
+  }
+}

@@ -14,17 +14,14 @@ type ButtonShape = "rounded" | "pill";
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-brand-deep text-white border border-brand-deep shadow-md " +
-    "hover:bg-academy-navy hover:border-academy-navy",
+    "btn-cta-primary border shadow-md",
   secondary:
     "bg-white text-academy-navy border-2 border-academy-line shadow-soft " +
-    "hover:border-brand/50 hover:bg-academy-mist",
-  accent:
-    "bg-brand text-white border border-brand shadow-md " +
-    "hover:bg-brand-deep hover:border-brand-deep",
+    "hover:border-[color-mix(in_srgb,var(--brand)_50%,transparent)] hover:bg-academy-mist",
+  accent: "btn-cta-accent border shadow-md",
   outline:
-    "bg-white text-brand-deep border-2 border-brand/30 shadow-soft " +
-    "hover:border-brand hover:bg-brand-tint",
+    "bg-white text-ink-brand-deep border-2 border-[color-mix(in_srgb,var(--brand)_30%,transparent)] shadow-soft " +
+    "hover:border-ink-brand hover:bg-fill-brand-tint",
   outlineLight:
     "bg-white/10 text-white border-2 border-white/40 " +
     "hover:bg-white/20 hover:border-white/60",
@@ -32,7 +29,7 @@ const variants: Record<ButtonVariant, string> = {
     "bg-transparent text-academy-navy border-2 border-transparent " +
     "hover:bg-academy-mist",
   link:
-    "bg-transparent text-brand-deep border-0 px-0 py-0 shadow-none " +
+    "bg-transparent text-ink-brand-deep border-0 px-0 py-0 shadow-none " +
     "underline-offset-4 hover:underline",
 };
 
