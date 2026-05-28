@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0b1f3a;
+  --academy-navy: #0b1f3a;
+  --academy-navy-light: #0f2744;
+  --academy-slate: #475569;
+  --academy-mist: #f8fafc;
+  --academy-mist-dark: #f1f5f9;
+  --academy-gold: #e8a317;
+  --academy-gold-light: #f59e0b;
+  --academy-orange: #ea580c;
+  --academy-white: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-academy-navy: var(--academy-navy);
+  --color-academy-navy-light: var(--academy-navy-light);
+  --color-academy-slate: var(--academy-slate);
+  --color-academy-mist: var(--academy-mist);
+  --color-academy-mist-dark: var(--academy-mist-dark);
+  --color-academy-gold: var(--academy-gold);
+  --color-academy-gold-light: var(--academy-gold-light);
+  --color-academy-orange: var(--academy-orange);
+  --color-academy-white: var(--academy-white);
+  --font-sans: var(--font-plus-jakarta);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--academy-gold) 35%, transparent);
+  color: var(--academy-navy);
+}

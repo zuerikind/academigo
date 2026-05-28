@@ -1,0 +1,17 @@
+{
+  "name": "Academigo",
+  "short_name": "Academigo",
+  "description": "Digitale Lernschule — persönlich, digital, individuell.",
+  "start_url": "/de",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1f3a",
+  "icons": [
+    {
+      "src": "/brand/logo-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
