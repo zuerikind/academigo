@@ -55,9 +55,33 @@ Dieses Projekt ist bereit für Vercel (keine zusätzlichen Environment-Variablen
 1. Repo auf GitHub verbunden lassen (`main`).
 2. In Vercel: **Add New Project** -> `academigo` importieren.
 3. Framework: **Next.js** (wird automatisch erkannt).
-4. Build Command: `npm run build` (Default ok).
-5. Output: `.next` (Default ok).
-6. Deploy klicken.
+4. **Root Directory:** leer lassen (Repository-Root, nicht `app_academigo/`).
+5. Build Command: `npm run build` (Default ok).
+6. **Output Directory:** leer lassen — **nicht** `out` oder `public` setzen (sonst Vercel-`404 NOT_FOUND`).
+7. Production Branch: `main`.
+8. Domains: `academigo.xyz` und `www.academigo.xyz` dem **gleichen** Projekt zuweisen.
+9. Deploy klicken.
+
+**Live-URLs (nach Deploy):**
+
+- https://www.academigo.xyz/de
+- https://www.academigo.xyz/en
+- `/` leitet auf `/de` weiter
+
+### Vercel zeigt `404: NOT_FOUND`, obwohl der Deploy „Ready“ ist?
+
+Das ist meist **kein** Next.js-404, sondern Vercel findet **keine Deployment-Ausgabe** für die aufgerufene Domain/URL.
+
+| Prüfen | Erwartung |
+|--------|-----------|
+| **Root Directory** | leer (Projektroot mit `package.json` und `app/`) |
+| **Output Directory** | leer (Next.js Server, kein Static Export) |
+| **Framework** | Next.js |
+| **Domain** unter *Settings → Domains* | `Valid Configuration`, zugewiesen zu diesem Projekt |
+| **Visit**-Link | Production-Domain oder `*.vercel.app` aus **diesem** Projekt — nicht ein alter Preview-Link |
+| **Production Branch** | `main` mit aktuellem Commit (`app/page.tsx` Redirect existiert) |
+
+Nach Einstellungsänderungen: **Redeploy** (Deployments → … → Redeploy).
 
 Optional via CLI:
 
