@@ -43,7 +43,7 @@ export function SystemSection({
       >
         {dict.flow.map((step, i) => (
           <div key={step} className="flex items-center gap-3 sm:gap-4">
-            <span className="rounded-2xl bg-academy-navy px-5 py-2.5 text-sm font-semibold text-white shadow-md">
+            <span className="rounded-2xl bg-[color:var(--brand-deep)] px-5 py-2.5 text-sm font-semibold text-white shadow-soft">
               {step}
             </span>
             {i < dict.flow.length - 1 && (

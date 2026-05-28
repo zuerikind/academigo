@@ -1,11 +1,11 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { BrandMark } from "@/components/brand/BrandLogo";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { DashboardMockup } from "@/components/ui/DashboardMockup";
 import { TrustStats } from "@/components/ui/TrustStats";
+import { appSignupUrl } from "@/lib/app-links";
 import { siteConfig } from "@/config/site";
 import { localePath } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/config";
@@ -23,54 +23,48 @@ function HeroCopy({
 
   return (
     <div className="max-w-xl">
-      <div className="flex items-center gap-3">
-        <BrandMark
-          brandName={common.brand}
-          size={40}
-          appearance="dark"
+      <p className="text-meta-brand inline-flex items-center gap-2.5">
+        <span
+          aria-hidden
+          className="h-px w-6 bg-[color:var(--brand)]/45"
         />
-        <p className="text-sm font-semibold uppercase tracking-widest text-academy-gold">
-          {hero.eyebrow}
-        </p>
-      </div>
-      <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
+        {hero.eyebrow}
+      </p>
+      <h1 className="text-hero mt-7 text-academy-navy">
         {hero.title}
       </h1>
-      <p className="mt-6 text-lg leading-relaxed text-white/80">{hero.lead}</p>
-      <p className="mt-4 text-base leading-relaxed text-white/70">
-        {hero.subjects}
-      </p>
-      <p className="mt-2 text-base text-white/70">{hero.location}</p>
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <Button href={siteConfig.links.consultation} external variant="accent">
-          {common.buttons.freeConsultation}
+      <p className="text-lead mt-6">{hero.lead}</p>
+      <p className="text-body mt-4">{hero.subjects}</p>
+      <p className="text-body mt-2">{hero.location}</p>
+      <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <Button
+          href={appSignupUrl(locale, "student")}
+          external
+          variant="accent"
+          size="lg"
+        >
+          {common.buttons.signUpStudent}
+        </Button>
+        <Button
+          href={appSignupUrl(locale, "teacher")}
+          external
+          variant="secondary"
+          size="lg"
+        >
+          {common.buttons.signUpTeacher}
         </Button>
         <Button
           href={`${localePath(locale)}${siteConfig.links.pricesAnchor}`}
           variant="outline"
+          size="lg"
         >
           {common.buttons.viewPricing}
         </Button>
       </div>
-      <div className="mt-10">
+      <div className="mt-12 border-t border-academy-line pt-8">
         <TrustStats items={hero.trust} />
       </div>
     </div>
-  );
-}
-
-function HeroBackground() {
-  return (
-    <>
-      <div
-        className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-academy-gold/10 blur-3xl"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-white/5 blur-3xl"
-        aria-hidden
-      />
-    </>
   );
 }
 
@@ -84,13 +78,16 @@ export function HeroSection({
   const reducedMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-academy-navy py-20 sm:py-28">
-      <HeroBackground />
-      <Container>
+    <section className="relative isolate overflow-hidden bg-white">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 [background:radial-gradient(80%_60%_at_85%_-10%,rgba(43,85,133,0.07),transparent_60%)]"
+      />
+      <Container className="relative py-16 sm:py-24 lg:py-28">
         {reducedMotion ? (
-          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
             <HeroCopy dict={dict} locale={locale} />
-            <div className="w-full lg:max-w-2xl lg:justify-self-end">
+            <div className="w-full lg:justify-self-end">
               <DashboardMockup
                 variant="hero"
                 dashboard={dict.dashboard}
@@ -100,7 +97,7 @@ export function HeroSection({
           </div>
         ) : (
           <motion.div
-            className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16"
+            className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16"
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
@@ -108,10 +105,7 @@ export function HeroSection({
             <motion.div variants={fadeUp}>
               <HeroCopy dict={dict} locale={locale} />
             </motion.div>
-            <motion.div
-              className="w-full lg:max-w-2xl lg:justify-self-end"
-              variants={fadeUp}
-            >
+            <motion.div className="w-full lg:justify-self-end" variants={fadeUp}>
               <DashboardMockup
                 variant="hero"
                 dashboard={dict.dashboard}

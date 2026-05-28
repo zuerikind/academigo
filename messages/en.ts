@@ -39,6 +39,9 @@ export const en = {
     buttons: {
       freeConsultation: "Free consultation",
       viewPricing: "View pricing",
+      signUpStudent: "Sign up as student",
+      signUpTeacher: "Sign up as teacher",
+      signIn: "Sign in",
       inquire: "Inquire",
       start: "Get started",
       testPlatform: "Try the platform",
@@ -56,6 +59,7 @@ export const en = {
   },
 
   nav: [
+    { label: "Platform", href: "#app" },
     { label: "System", href: "#system" },
     { label: "Subjects", href: "#subjects" },
     { label: "Platform", href: "#platform" },
@@ -68,8 +72,21 @@ export const en = {
     navigation: "Navigation",
     contact: "Contact",
     email: "Email",
+    studentSignUp: "Student sign up",
+    teacherSignUp: "Become a teacher",
+    signIn: "Sign in",
     learningPlatform: "Learning platform",
     copyright: "All rights reserved.",
+  },
+
+  appSignup: {
+    eyebrow: "Academigo platform",
+    title: "Get started on the platform",
+    description:
+      "Students and parents find the right teachers. Teachers can register and offer tutoring.",
+    signUpStudent: "Student registration",
+    signUpTeacher: "Teacher registration",
+    signIn: "Already have an account? Sign in",
   },
 
   hero: {

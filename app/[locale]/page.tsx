@@ -11,6 +11,7 @@ import { PricingSection } from "@/components/landing/PricingSection";
 import { ProcessSection } from "@/components/landing/ProcessSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { VisionSection } from "@/components/landing/VisionSection";
+import { AppSignupSection } from "@/components/landing/AppSignupSection";
 import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { isLocale } from "@/lib/i18n/config";
@@ -30,6 +31,7 @@ export default async function HomePage({ params }: Props) {
       <Header dict={dict} locale={raw} />
       <main className="flex-1">
         <HeroSection dict={dict} locale={raw} />
+        <AppSignupSection dict={dict.appSignup} locale={raw} />
         <ProblemSection dict={dict.problem} />
         <SystemSection dict={dict.system} />
         <SubjectsSection dict={dict.subjects} common={dict.common} />
@@ -47,6 +49,7 @@ export default async function HomePage({ params }: Props) {
           dict={dict.finalCta}
           buttons={dict.common.buttons}
           brandName={dict.common.brand}
+          locale={raw}
         />
       </main>
       <Footer dict={dict} locale={raw} />

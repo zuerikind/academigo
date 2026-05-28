@@ -39,6 +39,9 @@ export const de = {
     buttons: {
       freeConsultation: "Kostenlose Beratung",
       viewPricing: "Preise ansehen",
+      signUpStudent: "Für Schüler/innen registrieren",
+      signUpTeacher: "Als Lehrperson registrieren",
+      signIn: "Anmelden",
       inquire: "Anfragen",
       start: "Starten",
       testPlatform: "Plattform testen",
@@ -56,6 +59,7 @@ export const de = {
   },
 
   nav: [
+    { label: "Plattform", href: "#app" },
     { label: "System", href: "#system" },
     { label: "Fächer", href: "#subjects" },
     { label: "Plattform", href: "#platform" },
@@ -68,8 +72,21 @@ export const de = {
     navigation: "Navigation",
     contact: "Kontakt",
     email: "E-Mail",
+    studentSignUp: "Schüler/in registrieren",
+    teacherSignUp: "Lehrperson werden",
+    signIn: "Anmelden",
     learningPlatform: "Lernplattform",
     copyright: "Alle Rechte vorbehalten.",
+  },
+
+  appSignup: {
+    eyebrow: "Academigo Plattform",
+    title: "Direkt auf der Plattform starten",
+    description:
+      "Schüler/innen und Eltern finden passende Lehrpersonen. Lehrpersonen können sich registrieren und Nachhilfe anbieten.",
+    signUpStudent: "Registrierung Schüler/in",
+    signUpTeacher: "Registrierung Lehrperson",
+    signIn: "Bereits Konto? Anmelden",
   },
 
   hero: {

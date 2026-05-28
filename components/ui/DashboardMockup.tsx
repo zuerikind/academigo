@@ -49,7 +49,7 @@ export function DashboardMockup({
         <HeroScreenshot alt={heroImageAlt ?? dashboard.galleryTitle} />
       )}
       <div
-        className="pointer-events-none absolute -inset-4 -z-10 rounded-[2rem] bg-academy-gold/20 blur-3xl"
+        className="pointer-events-none absolute -inset-4 -z-10 rounded-[2rem] bg-[color:var(--brand)]/15 blur-3xl"
         aria-hidden
       />
     </motion.div>

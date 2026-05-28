@@ -25,7 +25,7 @@ export async function createOgImageResponse(dict: Dictionary) {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 80px",
-          background: "linear-gradient(135deg, #0b1f3a 0%, #0f2744 55%, #132f52 100%)",
+          background: "linear-gradient(135deg, #1E3A5F 0%, #2B5585 55%, #1E3A5F 100%)",
           color: "#ffffff",
           fontFamily:
             'ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
@@ -58,7 +58,7 @@ export async function createOgImageResponse(dict: Dictionary) {
                 fontWeight: 700,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "#e8a317",
+                color: "#93B4D9",
               }}
             >
               Academigo
@@ -122,8 +122,8 @@ export async function createOgImageResponse(dict: Dictionary) {
             style={{
               padding: "12px 28px",
               borderRadius: 999,
-              background: "#e8a317",
-              color: "#0b1f3a",
+              background: "#3B82F6",
+              color: "#ffffff",
               fontSize: 22,
               fontWeight: 700,
             }}

@@ -62,8 +62,8 @@ function StepCard({
     <div className="flex flex-col items-center text-center">
       <div
         className={cn(
-          "relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-academy-navy text-lg font-bold text-white shadow-lg shadow-academy-navy/25",
-          animated && "ring-4 ring-academy-gold/30",
+          "relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--brand-deep)] text-lg font-bold text-white shadow-card",
+          animated && "ring-4 ring-[color:var(--brand)]/25",
         )}
       >
         {number}

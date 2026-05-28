@@ -12,6 +12,7 @@ export const siteConfig = {
   },
 
   links: {
+    appOrigin: "https://app.academigo.xyz",
     whatsapp: "https://wa.me/41786936898",
     platform: "https://platform.mathetogo.xyz",
     consultation: "https://wa.me/41786936898",

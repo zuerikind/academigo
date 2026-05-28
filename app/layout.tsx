@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#0b1f3a",
+  themeColor: "#1E3A5F",
 };
 
 export const metadata: Metadata = {
@@ -19,9 +19,17 @@ export const metadata: Metadata = {
   },
 };
 
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
@@ -32,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${plusJakarta.variable} h-full scroll-smooth`}
+      className={`${inter.variable} ${manrope.variable} h-full scroll-smooth`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >

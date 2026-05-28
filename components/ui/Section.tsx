@@ -5,12 +5,13 @@ import { Container } from "@/components/ui/Container";
 import { fadeUp, getMotionProps } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
-type SectionVariant = "white" | "mist" | "navy";
+type SectionVariant = "white" | "mist" | "paper" | "brand";
 
 const backgrounds: Record<SectionVariant, string> = {
   white: "bg-white",
   mist: "bg-academy-mist",
-  navy: "bg-academy-navy text-white",
+  paper: "bg-academy-paper-soft",
+  brand: "bg-[color:var(--brand-deep)] text-white",
 };
 
 export function Section({
@@ -34,13 +35,17 @@ export function Section({
 }) {
   const reducedMotion = useReducedMotion();
   const motionProps = getMotionProps(!!reducedMotion);
+  const onBrand = variant === "brand";
 
   return (
-    <section id={id} className={cn("py-20 sm:py-28", backgrounds[variant], className)}>
+    <section
+      id={id}
+      className={cn("py-[var(--rhythm-sm)] sm:py-[var(--rhythm-md)]", backgrounds[variant], className)}
+    >
       <Container>
         <motion.header
           className={cn(
-            "mb-12 sm:mb-16",
+            "mb-12 sm:mb-14",
             centered && "mx-auto max-w-3xl text-center",
             headerClassName,
           )}
@@ -49,8 +54,8 @@ export function Section({
         >
           <h2
             className={cn(
-              "text-3xl font-bold tracking-tight sm:text-4xl",
-              variant === "navy" ? "text-white" : "text-academy-navy",
+              "text-display",
+              onBrand ? "text-white" : "text-academy-navy",
             )}
           >
             {title}
@@ -58,8 +63,8 @@ export function Section({
           {subtitle && (
             <p
               className={cn(
-                "mt-4 text-lg leading-relaxed",
-                variant === "navy" ? "text-white/80" : "text-academy-slate",
+                "text-lead mt-4",
+                onBrand && "text-white/75",
               )}
             >
               {subtitle}

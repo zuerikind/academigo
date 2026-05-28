@@ -30,7 +30,7 @@ export function LanguageSwitcher({
             className={cn(
               "rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors",
               active
-                ? "bg-academy-navy text-white"
+                ? "bg-[color:var(--brand-deep)] text-white"
                 : "text-academy-slate hover:text-academy-navy",
             )}
             aria-current={active ? "true" : undefined}

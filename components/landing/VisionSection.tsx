@@ -7,12 +7,12 @@ export function VisionSection({
   dict: Dictionary["vision"];
 }) {
   return (
-    <Section id="vision" title={dict.title} variant="navy">
+    <Section id="vision" title={dict.title} variant="brand">
       <div className="mx-auto max-w-3xl space-y-6 text-center text-lg leading-relaxed text-white/85">
         {dict.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
-        <p className="text-xl font-semibold text-academy-gold">{dict.goal}</p>
+        <p className="text-subheading text-white/90">{dict.goal}</p>
       </div>
     </Section>
   );

@@ -1,6 +1,7 @@
 import { BrandLogo } from "@/components/brand/BrandLogo";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { appLoginUrl, appSignupUrl } from "@/lib/app-links";
 import { localePath } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/messages/types";
@@ -16,19 +17,17 @@ export function Footer({
   const { common, nav, footer, meta } = dict;
 
   return (
-    <footer className="border-t border-academy-navy-light bg-academy-navy text-white">
-      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
+    <footer className="border-t border-[color:var(--brand-deep)] bg-[color:var(--brand-deep)] text-white">
+      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-10">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <BrandLogo variant="footer" brandName={common.brand} />
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-white/70">
+            <p className="mt-5 max-w-md text-[13.5px] leading-relaxed text-white/65">
               {meta.description}
             </p>
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-academy-gold">
-              {footer.navigation}
-            </p>
+            <p className="text-meta text-white/55">{footer.navigation}</p>
             <ul className="mt-4 space-y-2">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -43,10 +42,38 @@ export function Footer({
             </ul>
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-academy-gold">
-              {footer.contact}
-            </p>
+            <p className="text-meta text-white/55">{footer.contact}</p>
             <ul className="mt-4 space-y-2 text-sm text-white/70">
+              <li>
+                <a
+                  href={appSignupUrl(locale, "student")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  {footer.studentSignUp}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={appSignupUrl(locale, "teacher")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  {footer.teacherSignUp}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={appLoginUrl(locale)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  {footer.signIn}
+                </a>
+              </li>
               <li>
                 <a
                   href={siteConfig.links.whatsapp}
@@ -55,16 +82,6 @@ export function Footer({
                   className="hover:text-white"
                 >
                   {common.buttons.whatsapp}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={siteConfig.links.platform}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  {footer.learningPlatform}
                 </a>
               </li>
               <li>

@@ -1,49 +1,98 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "accent" | "outline" | "ghost";
+type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "accent"
+  | "outline"
+  | "outlineLight"
+  | "ghost"
+  | "link";
+type ButtonSize = "sm" | "md" | "lg";
+type ButtonShape = "rounded" | "pill";
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-academy-navy text-white hover:bg-academy-navy-light shadow-lg shadow-academy-navy/20",
+    "bg-[color:var(--brand-deep)] text-white border border-[color:var(--brand-deep)] " +
+    "hover:bg-[color:var(--academy-navy)] hover:border-[color:var(--academy-navy)] " +
+    "shadow-[var(--shadow-button)]",
   secondary:
-    "bg-white text-academy-navy border border-academy-mist-dark hover:border-academy-gold/50 shadow-md",
+    "bg-white text-academy-navy border border-academy-line " +
+    "hover:border-[color:var(--brand)]/40 hover:bg-academy-mist",
   accent:
-    "bg-academy-gold text-academy-navy hover:bg-academy-gold-light shadow-lg shadow-academy-gold/30",
+    "bg-[color:var(--brand)] text-white border border-[color:var(--brand)] " +
+    "hover:bg-[color:var(--brand-deep)] hover:border-[color:var(--brand-deep)] " +
+    "shadow-[var(--shadow-button)]",
   outline:
-    "border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm",
-  ghost: "text-academy-navy hover:bg-academy-mist",
+    "bg-transparent text-academy-navy border border-academy-line " +
+    "hover:border-[color:var(--brand)]/40 hover:text-[color:var(--brand-deep)]",
+  outlineLight:
+    "bg-transparent text-white border border-white/35 " +
+    "hover:bg-white/10 hover:border-white/50",
+  ghost:
+    "bg-transparent text-academy-navy border border-transparent hover:bg-academy-mist",
+  link:
+    "bg-transparent text-[color:var(--brand-deep)] border-0 px-0 py-0 " +
+    "underline-offset-4 hover:underline",
+};
+
+const sizes: Record<ButtonSize, string> = {
+  sm: "h-8 px-3 text-[13px] gap-1.5",
+  md: "h-10 px-4 text-sm gap-2",
+  lg: "h-12 px-5 text-[15px] gap-2",
 };
 
 type ButtonProps = {
   children: React.ReactNode;
   href?: string;
   variant?: ButtonVariant;
+  size?: ButtonSize;
+  shape?: ButtonShape;
   className?: string;
   external?: boolean;
   onClick?: () => void;
   type?: "button" | "submit";
+  fullWidth?: boolean;
 };
 
 export function Button({
   children,
   href,
   variant = "primary",
+  size = "md",
+  shape = "pill",
   className,
   external,
   onClick,
   type = "button",
+  fullWidth,
 }: ButtonProps) {
+  const radius =
+    variant === "link"
+      ? ""
+      : shape === "pill"
+        ? "rounded-full"
+        : "rounded-[10px]";
+
   const base = cn(
-    "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-academy-gold",
+    "inline-flex items-center justify-center font-medium tracking-tight btn-tactile",
+    variant !== "link" && sizes[size],
+    radius,
     variants[variant],
+    fullWidth && "w-full",
     className,
   );
 
   if (href) {
     if (external) {
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={base}>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={base}
+        >
           {children}
         </a>
       );

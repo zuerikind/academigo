@@ -12,9 +12,9 @@ export function Card({
   return (
     <div
       className={cn(
-        "rounded-3xl border border-academy-mist-dark/80 bg-white p-6 shadow-lg shadow-academy-navy/5 transition-shadow duration-300 hover:shadow-xl sm:p-8",
+        "rounded-2xl border border-academy-line bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover sm:p-8",
         highlight &&
-          "ring-2 ring-academy-gold shadow-xl shadow-academy-gold/15",
+          "ring-1 ring-[color:var(--brand)]/35 shadow-card-hover",
         className,
       )}
     >
