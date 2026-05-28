@@ -14,33 +14,32 @@ type ButtonShape = "rounded" | "pill";
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-[color:var(--brand-deep)] text-white border border-[color:var(--brand-deep)] " +
-    "hover:bg-[color:var(--academy-navy)] hover:border-[color:var(--academy-navy)] " +
-    "shadow-[var(--shadow-button)]",
+    "bg-brand-deep text-white border border-brand-deep shadow-md " +
+    "hover:bg-academy-navy hover:border-academy-navy",
   secondary:
-    "bg-white text-academy-navy border border-academy-line " +
-    "hover:border-[color:var(--brand)]/40 hover:bg-academy-mist",
+    "bg-white text-academy-navy border-2 border-academy-line shadow-soft " +
+    "hover:border-brand/50 hover:bg-academy-mist",
   accent:
-    "bg-[color:var(--brand)] text-white border border-[color:var(--brand)] " +
-    "hover:bg-[color:var(--brand-deep)] hover:border-[color:var(--brand-deep)] " +
-    "shadow-[var(--shadow-button)]",
+    "bg-brand text-white border border-brand shadow-md " +
+    "hover:bg-brand-deep hover:border-brand-deep",
   outline:
-    "bg-transparent text-academy-navy border border-academy-line " +
-    "hover:border-[color:var(--brand)]/40 hover:text-[color:var(--brand-deep)]",
+    "bg-white text-brand-deep border-2 border-brand/30 shadow-soft " +
+    "hover:border-brand hover:bg-brand-tint",
   outlineLight:
-    "bg-transparent text-white border border-white/35 " +
-    "hover:bg-white/10 hover:border-white/50",
+    "bg-white/10 text-white border-2 border-white/40 " +
+    "hover:bg-white/20 hover:border-white/60",
   ghost:
-    "bg-transparent text-academy-navy border border-transparent hover:bg-academy-mist",
+    "bg-transparent text-academy-navy border-2 border-transparent " +
+    "hover:bg-academy-mist",
   link:
-    "bg-transparent text-[color:var(--brand-deep)] border-0 px-0 py-0 " +
+    "bg-transparent text-brand-deep border-0 px-0 py-0 shadow-none " +
     "underline-offset-4 hover:underline",
 };
 
 const sizes: Record<ButtonSize, string> = {
-  sm: "h-8 px-3 text-[13px] gap-1.5",
-  md: "h-10 px-4 text-sm gap-2",
-  lg: "h-12 px-5 text-[15px] gap-2",
+  sm: "min-h-9 px-4 text-[13px] gap-1.5 font-semibold",
+  md: "min-h-11 px-5 text-sm gap-2 font-semibold",
+  lg: "min-h-12 px-6 text-[15px] gap-2 font-semibold",
 };
 
 type ButtonProps = {
@@ -73,10 +72,10 @@ export function Button({
       ? ""
       : shape === "pill"
         ? "rounded-full"
-        : "rounded-[10px]";
+        : "rounded-xl";
 
   const base = cn(
-    "inline-flex items-center justify-center font-medium tracking-tight btn-tactile",
+    "inline-flex items-center justify-center tracking-tight transition-colors btn-tactile",
     variant !== "link" && sizes[size],
     radius,
     variants[variant],

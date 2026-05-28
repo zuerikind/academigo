@@ -18,7 +18,7 @@ export function IconBox({
   return (
     <span
       className={cn(
-        "inline-flex shrink-0 items-center justify-center bg-[color:var(--brand-tint)] text-[color:var(--brand-deep)]",
+        "inline-flex shrink-0 items-center justify-center bg-brand-tint text-brand-deep",
         sizes[size],
         className,
       )}

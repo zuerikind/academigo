@@ -30,7 +30,7 @@ export function Header({
 
   return (
     <header className="sticky top-0 z-50 border-b border-academy-line bg-white/95 backdrop-blur-md">
-      <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center gap-4 px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto flex min-h-[4.5rem] max-w-7xl items-center gap-3 px-5 py-2 sm:px-8 lg:gap-4 lg:px-10">
         <Link
           href={localePath(locale)}
           className="shrink-0 rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand)]/40 focus-visible:ring-offset-2"

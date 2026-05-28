@@ -32,6 +32,8 @@ export const de = {
 
   common: {
     brand: "Academigo",
+    heroCtaTitle: "Konto auf der Plattform erstellen",
+    heroCtaSubtitle: "Für Schüler/innen, Eltern und Lehrpersonen",
     minutes: "Minuten",
     perLesson: "pro Lektion",
     popular: "Beliebt",

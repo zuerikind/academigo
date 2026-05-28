@@ -10,7 +10,7 @@ export function TrustStats({
       {items.map((item) => (
         <li key={item.label} className="flex items-start gap-2.5">
           <Check
-            className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--brand)]"
+            className="mt-0.5 h-4 w-4 shrink-0 text-brand"
             strokeWidth={2.5}
             aria-hidden
           />

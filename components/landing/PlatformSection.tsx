@@ -38,40 +38,41 @@ export function PlatformSection({
       subtitle={dict.subtitle}
       variant="white"
       centered={false}
-      headerClassName="max-w-2xl text-left sm:text-left"
+      headerClassName="max-w-2xl text-left"
     >
-      <div className="grid items-start gap-10 xl:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] xl:gap-12">
-        <div>
-          <ul className="grid gap-3 sm:grid-cols-2">
+      <div className="grid items-start gap-10 lg:grid-cols-[minmax(280px,380px)_1fr] lg:gap-12">
+        <div className="flex min-w-0 flex-col">
+          <ul className="grid gap-3">
             {dict.features.map((label, index) => {
               const Icon = featureIcons[index];
               return (
                 <li
                   key={label}
-                  className="flex items-center gap-3 rounded-xl border border-academy-line bg-academy-paper-soft px-4 py-3.5 transition-colors hover:border-[color:var(--brand)]/25 hover:bg-white"
+                  className="flex min-w-0 items-start gap-3 rounded-xl border border-academy-line bg-white p-4 shadow-soft"
                 >
-                  <IconBox size="sm">
+                  <IconBox size="sm" className="mt-0.5 shrink-0">
                     <Icon strokeWidth={1.75} aria-hidden />
                   </IconBox>
-                  <span className="text-sm font-medium text-academy-navy">
+                  <span className="min-w-0 flex-1 text-sm font-semibold leading-snug text-academy-navy">
                     {label}
                   </span>
                 </li>
               );
             })}
           </ul>
-          <div className="mt-8">
+          <div className="mt-6">
             <Button
               href={siteConfig.links.platform}
               external
               variant="accent"
               size="lg"
+              fullWidth
             >
               {buttons.testPlatform}
             </Button>
           </div>
         </div>
-        <div className="w-full min-w-0 xl:justify-self-stretch">
+        <div className="min-w-0 w-full">
           <DashboardMockup variant="platform" dashboard={dashboard} />
         </div>
       </div>

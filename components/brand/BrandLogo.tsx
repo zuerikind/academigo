@@ -6,20 +6,14 @@ export const brandAssetPaths = {
   full: "/brand/logo-full.png",
 } as const;
 
-type LogoAppearance = "light" | "dark";
-
-/**
- * White tile so navy line-art PNGs stay visible on dark navy sections.
- * Do not use CSS invert on raster logos with white backgrounds.
- */
 function LogoTile({
   children,
-  size = "md",
   className,
+  size = "md",
 }: {
   children: React.ReactNode;
-  size?: "sm" | "md" | "lg" | "xl";
   className?: string;
+  size?: "sm" | "md" | "lg" | "xl";
 }) {
   const sizes = {
     sm: "h-11 w-11 p-1.5",
@@ -41,57 +35,9 @@ function LogoTile({
   );
 }
 
-function LogoIconImage({
-  size,
-  className,
-  priority,
-}: {
-  size: number;
-  className?: string;
-  priority?: boolean;
-}) {
-  return (
-    <Image
-      src={brandAssetPaths.icon}
-      alt=""
-      width={size}
-      height={size}
-      unoptimized
-      priority={priority}
-      className={cn("object-contain", className)}
-      style={{ width: size, height: size, maxWidth: "100%", maxHeight: "100%" }}
-      aria-hidden
-    />
-  );
-}
-
-function LogoFullImage({
-  className,
-  priority,
-  maxHeight = 112,
-}: {
-  className?: string;
-  priority?: boolean;
-  maxHeight?: number;
-}) {
-  return (
-    <Image
-      src={brandAssetPaths.full}
-      alt=""
-      width={200}
-      height={220}
-      unoptimized
-      priority={priority}
-      className={cn("w-auto object-contain", className)}
-      style={{ height: maxHeight, width: "auto", maxWidth: "100%" }}
-      aria-hidden
-    />
-  );
-}
-
 type BrandLogoProps = {
   brandName: string;
-  variant: "header" | "footer";
+  variant: "header" | "footer" | "hero";
   className?: string;
   priority?: boolean;
 };
@@ -106,20 +52,83 @@ export function BrandLogo({
     return (
       <div className={cn("inline-block", className)}>
         <LogoTile size="xl">
-          <LogoFullImage priority={priority} maxHeight={120} />
+          <Image
+            src={brandAssetPaths.full}
+            alt=""
+            width={220}
+            height={140}
+            unoptimized
+            priority={priority}
+            className="h-[7.5rem] w-auto max-w-[220px] object-contain"
+            aria-hidden
+          />
         </LogoTile>
         <span className="sr-only">{brandName}</span>
       </div>
     );
   }
 
+  if (variant === "hero") {
+    return (
+      <span
+        className={cn("inline-flex items-center gap-4", className)}
+        aria-label={brandName}
+      >
+        <Image
+          src={brandAssetPaths.icon}
+          alt=""
+          width={64}
+          height={64}
+          unoptimized
+          priority={priority}
+          className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
+          aria-hidden
+        />
+        <Image
+          src={brandAssetPaths.full}
+          alt=""
+          width={200}
+          height={80}
+          unoptimized
+          priority={priority}
+          className="hidden h-12 w-auto max-w-[200px] object-contain sm:block md:h-14 md:max-w-[240px]"
+          aria-hidden
+        />
+        <span className="font-display text-2xl font-bold tracking-tight text-academy-navy sm:hidden">
+          {brandName}
+        </span>
+      </span>
+    );
+  }
+
   return (
     <span
-      className={cn("inline-flex items-center", className)}
+      className={cn("inline-flex items-center gap-2.5 sm:gap-3", className)}
       aria-label={brandName}
     >
-      <LogoFullImage priority={priority} maxHeight={48} className="sm:max-h-[52px]" />
-      <span className="sr-only">{brandName}</span>
+      <Image
+        src={brandAssetPaths.icon}
+        alt=""
+        width={48}
+        height={48}
+        unoptimized
+        priority={priority}
+        className="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11"
+        aria-hidden
+      />
+      <Image
+        src={brandAssetPaths.full}
+        alt=""
+        width={180}
+        height={72}
+        unoptimized
+        priority={priority}
+        className="hidden h-9 w-auto max-w-[160px] object-contain sm:block sm:h-10 sm:max-w-[180px] md:max-w-[200px]"
+        aria-hidden
+      />
+      <span className="font-display text-lg font-bold tracking-tight text-academy-navy sm:text-xl">
+        {brandName}
+      </span>
     </span>
   );
 }
@@ -134,10 +143,22 @@ export function BrandMark({
   brandName: string;
   className?: string;
   size?: number;
-  appearance?: LogoAppearance;
+  appearance?: "light" | "dark";
   priority?: boolean;
 }) {
-  const icon = <LogoIconImage size={size} priority={priority} />;
+  const icon = (
+    <Image
+      src={brandAssetPaths.icon}
+      alt=""
+      width={size}
+      height={size}
+      unoptimized
+      priority={priority}
+      className="object-contain"
+      style={{ width: size, height: size }}
+      aria-hidden
+    />
+  );
 
   if (appearance === "dark") {
     const tileSize = size >= 44 ? "md" : "sm";
