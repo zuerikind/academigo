@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { BrandLogo } from "@/components/brand/BrandLogo";
 import { SignUpCtaGroup } from "@/components/layout/SignUpCtaGroup";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -24,13 +23,6 @@ function HeroCopy({
 
   return (
     <div className="max-w-xl">
-      <BrandLogo
-        variant="hero"
-        brandName={common.brand}
-        className="mb-8"
-        priority
-      />
-
       <p className="text-meta-brand inline-flex items-center gap-2.5">
         <span
           aria-hidden

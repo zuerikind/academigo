@@ -89,40 +89,62 @@ function PlatformScreenshots({ dashboard }: { dashboard: Dictionary["dashboard"]
   );
 
   return (
-    <div className="min-w-0 rounded-2xl border border-academy-line bg-white p-4 shadow-card sm:p-5">
-      <p className="text-meta-brand">{dashboard.galleryTitle}</p>
-      <div className="mt-3 flex flex-wrap gap-2">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            type="button"
-            onClick={() => setActiveTab(tab.id)}
-            title={tab.title}
-            className={cn(
-              "min-h-10 shrink-0 rounded-full border px-3 py-2 text-center text-xs font-semibold leading-tight transition-colors sm:px-4 sm:text-sm",
-              activeTab === tab.id
-                ? "border-ink-brand-deep bg-fill-brand-deep text-on-brand shadow-md"
-                : "border-academy-line bg-white text-academy-navy hover:border-[color-mix(in_srgb,var(--brand)_40%,transparent)] hover:bg-fill-brand-tint",
-            )}
-          >
-            {tab.title}
-          </button>
-        ))}
+    <div className="min-w-0 overflow-hidden rounded-2xl border border-academy-line bg-white shadow-card">
+      <div className="flex items-center gap-2 border-b border-academy-line bg-academy-mist/60 px-4 py-3">
+        <span className="flex gap-1.5" aria-hidden>
+          <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+        </span>
+        <span className="mx-auto min-w-0 truncate rounded-md border border-academy-line/80 bg-white px-3 py-1 text-center text-[11px] font-medium text-academy-slate-muted">
+          app.academigo.xyz
+        </span>
       </div>
 
-      <p className="mt-4 text-sm leading-relaxed text-academy-slate">
-        {active.description}
-      </p>
+      <div className="p-4 sm:p-5">
+        <p className="text-meta-brand">{dashboard.galleryTitle}</p>
 
-      <div className="mt-4 overflow-hidden rounded-xl border border-academy-line bg-academy-paper-soft">
-        <Image
-          src={screenshotMap[active.id]}
-          alt={active.imageAlt}
-          width={active.id === "quiz" ? 988 : 1024}
-          height={active.id === "quiz" ? 908 : 970}
-          className="h-auto w-full"
-          sizes="(max-width: 1280px) 100vw, 720px"
-        />
+        <div
+          className="mt-3 inline-flex max-w-full flex-wrap gap-1 rounded-full border border-academy-line bg-academy-mist/50 p-1"
+          role="tablist"
+          aria-label={dashboard.galleryTitle}
+        >
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              role="tab"
+              aria-selected={activeTab === tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={cn(
+                "min-h-9 shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold leading-tight transition-all sm:px-4 sm:text-sm",
+                activeTab === tab.id
+                  ? "bg-fill-brand-deep text-on-brand shadow-sm"
+                  : "text-academy-slate hover:bg-white hover:text-academy-navy",
+              )}
+            >
+              {tab.title}
+            </button>
+          ))}
+        </div>
+
+        <p className="mt-3 rounded-lg bg-fill-brand-tint px-3 py-2 text-sm leading-relaxed text-academy-slate">
+          {active.description}
+        </p>
+
+        <div
+          className="mt-4 overflow-hidden rounded-xl border border-academy-line bg-academy-paper-soft ring-1 ring-black/[0.03]"
+          role="tabpanel"
+        >
+          <Image
+            src={screenshotMap[active.id]}
+            alt={active.imageAlt}
+            width={active.id === "quiz" ? 988 : 1024}
+            height={active.id === "quiz" ? 908 : 970}
+            className="h-auto w-full"
+            sizes="(max-width: 1280px) 100vw, 720px"
+          />
+        </div>
       </div>
     </div>
   );

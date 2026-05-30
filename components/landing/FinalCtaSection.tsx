@@ -25,12 +25,13 @@ export function FinalCtaSection({
         <div className="rounded-2xl bg-[color:var(--brand-deep)] px-6 py-12 text-center shadow-pop sm:px-10 sm:py-14">
           <BrandMark brandName={brandName} size={48} appearance="dark" />
           <h2 className="text-display mt-6 text-white">{dict.title}</h2>
-          <p className="text-lead mx-auto mt-4 max-w-lg text-white/75">
+          <p className="text-lead-on-dark mx-auto mt-4 max-w-lg sm:text-lg">
             {dict.description}
           </p>
           <div className="mt-8 flex flex-col items-center gap-4">
             <SignUpCtaGroup
               locale={locale}
+              tone="dark"
               labels={{
                 student: buttons.signUpStudent,
                 teacher: buttons.signUpTeacher,

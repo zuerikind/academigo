@@ -200,15 +200,34 @@ export const de = {
   },
 
   platform: {
+    eyebrow: "Digitale Lernplattform",
     title: "Lernen auch zwischen den Lektionen.",
     subtitle: "Unsere Plattform ergänzt die Nachhilfe durch interaktives Lernen.",
     features: [
-      "Quizfragen",
-      "Aufgaben",
-      "Sofortiges Feedback",
-      "Lernfortschritt",
-      "Fehleranalyse",
-      "Prüfungsvorbereitung",
+      {
+        title: "Quizfragen",
+        description: "Abgestufte Quiz-Level zu jedem Thema.",
+      },
+      {
+        title: "Aufgaben",
+        description: "Strukturierte Übungen mit klaren Zielen.",
+      },
+      {
+        title: "Sofortiges Feedback",
+        description: "Direkte Rückmeldung nach jeder Antwort.",
+      },
+      {
+        title: "Lernfortschritt",
+        description: "XP, Rang und Statistiken im Überblick.",
+      },
+      {
+        title: "Fehleranalyse",
+        description: "Schwächen erkennen und gezielt üben.",
+      },
+      {
+        title: "Prüfungsvorbereitung",
+        description: "Gezielt auf Prüfungen vorbereiten.",
+      },
     ],
   },
 
@@ -262,31 +281,62 @@ export const de = {
 
   pricing: {
     title: "Preise",
-    platformLabel: "Plattform",
-    lessons: [
+    perMonth: "Monat",
+    includedLabel: "Enthalten:",
+    tiers: [
       {
-        id: "single",
-        name: "Einzelstunde",
+        id: "essentials",
+        name: "Academigo Essentials",
+        tagline: "Flexible Unterstützung für gezielte Fragen und kurzfristige Lernziele",
+        description:
+          "Ideal für Schülerinnen und Schüler, die punktuelle Unterstützung benötigen oder einzelne Themen gezielt vertiefen möchten.",
+        options: [
+          { id: "single", label: "Einzelstunde (50 Minuten)" },
+          { id: "pack5", label: "5er-Paket" },
+          { id: "pack10", label: "10er-Paket" },
+        ],
+        features: [
+          "Individuelle Betreuung",
+          "Online oder vor Ort",
+          "Zugang zur Academigo Lernplattform",
+        ],
         cta: "Anfragen",
-        description: "Ideal für einzelne Themen oder Prüfungen.",
       },
       {
-        id: "pack5",
-        name: "5er Paket",
+        id: "plus",
+        name: "Academigo Plus",
+        tagline: "Regelmässige Begleitung für nachhaltige Fortschritte",
+        description:
+          "Für Schülerinnen und Schüler, die kontinuierlich an ihren Leistungen arbeiten und Lernlücken systematisch schliessen möchten.",
+        included: [
+          "4 Lektionen pro Monat",
+          "Persönlicher Lernplan",
+          "Zugang zur Academigo Lernplattform",
+          "Individuelle Übungen und Empfehlungen",
+          "Strukturierte Lernbegleitung",
+          "Laufende Anpassung der Lernziele",
+        ],
         cta: "Starten",
-        description: "Für gezielte Vorbereitung.",
       },
       {
-        id: "pack10",
-        name: "10er Paket",
+        id: "excellence",
+        name: "Academigo Excellence",
+        tagline: "Umfassende Förderung für ambitionierte Ziele",
+        description:
+          "Unser Premium-Programm für Schülerinnen und Schüler, die ihr volles Potenzial ausschöpfen und langfristig hervorragende Leistungen erzielen möchten.",
+        included: [
+          "8 Lektionen pro Monat",
+          "Persönlicher Lernplan",
+          "Individuelle Förderung und Lernstrategie",
+          "Regelmässige Fortschrittsanalysen",
+          "Zugang zur Academigo Lernplattform",
+          "Priorisierte Terminvergabe",
+          "Individuelle Übungen und Lernmaterialien",
+          "Langfristige Zielplanung und akademische Begleitung",
+        ],
         cta: "Starten",
-        description: "Langfristige Begleitung.",
       },
     ],
-    platform: {
-      period: "Monat",
-      description: "Interaktive Lernplattform.",
-    },
   },
 
   process: {

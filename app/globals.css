@@ -213,6 +213,13 @@ body {
   letter-spacing: -0.008em;
 }
 
+.text-lead-on-dark {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, white 95%, transparent);
+  letter-spacing: -0.008em;
+}
+
 .text-body {
   font-size: 0.9375rem;
   line-height: 1.6;

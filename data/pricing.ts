@@ -1,29 +1,24 @@
 /** Numeric pricing only — labels live in messages/{de,en}.ts */
 export const pricingAmounts = {
-  lessons: [
+  tiers: [
     {
-      id: "single",
-      priceChf: 70,
-      durationMin: 50,
-      perLessonChf: null as number | null,
+      id: "essentials",
       highlight: false,
+      options: [
+        { id: "single", priceChf: 79 },
+        { id: "pack5", priceChf: 375 },
+        { id: "pack10", priceChf: 690 },
+      ],
     },
     {
-      id: "pack5",
-      priceChf: 325,
-      durationMin: 50,
-      perLessonChf: 65,
+      id: "plus",
+      priceChf: 299,
       highlight: true,
     },
     {
-      id: "pack10",
-      priceChf: 620,
-      durationMin: 50,
-      perLessonChf: 62,
+      id: "excellence",
+      priceChf: 549,
       highlight: false,
     },
   ],
-  platform: {
-    priceChf: 50,
-  },
 } as const;

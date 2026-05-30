@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -10,79 +11,124 @@ import { cn } from "@/lib/utils";
 export function PricingSection({ dict }: { dict: Dictionary }) {
   const { pricing, common } = dict;
 
-  const plans = pricingAmounts.lessons.map((amount) => {
-    const copy = pricing.lessons.find((l) => l.id === amount.id)!;
-    return { ...amount, ...copy };
-  });
-
   return (
     <Section id="pricing" title={pricing.title} variant="paper">
-      <AnimatedGrid className="grid gap-6 lg:grid-cols-3">
-        {plans.map((plan) => (
-          <AnimatedItem key={plan.id}>
-            <Card
-              highlight={plan.highlight}
-              className={cn(
-                "flex h-full flex-col",
-                plan.highlight && "relative z-[1] lg:-mt-1 lg:mb-1",
-              )}
-            >
-              {plan.highlight && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[color:var(--brand)] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-white shadow-soft">
-                  {common.popular}
-                </span>
-              )}
-              <h3 className="text-subheading text-academy-navy">{plan.name}</h3>
-              <p className="mt-4 font-display text-4xl font-semibold tracking-tight text-academy-navy text-numeric">
-                CHF {plan.priceChf}
-              </p>
-              {plan.perLessonChf && (
-                <p className="mt-1 text-sm font-medium text-[color:var(--brand-deep)]">
-                  CHF {plan.perLessonChf} {common.perLesson}
-                </p>
-              )}
-              <p className="text-caption mt-2">
-                {plan.durationMin} {common.minutes}
-              </p>
-              <p className="text-body mt-4 flex-1">{plan.description}</p>
-              <Button
-                href={siteConfig.links.consultation}
-                external
-                variant={plan.highlight ? "accent" : "primary"}
-                size="lg"
-                className="mt-8 w-full"
-              >
-                {plan.cta}
-              </Button>
-            </Card>
-          </AnimatedItem>
-        ))}
-      </AnimatedGrid>
+      <AnimatedGrid className="grid items-stretch gap-6 lg:grid-cols-3">
+        {pricingAmounts.tiers.map((amount) => {
+          const copy = pricing.tiers.find((t) => t.id === amount.id)!;
+          const isEssentials = amount.id === "essentials";
 
-      <div className="mt-10 overflow-hidden rounded-2xl border border-[color:var(--brand)]/20 bg-gradient-to-br from-[color:var(--brand-tint)] via-white to-white shadow-card">
-        <div className="flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
-          <div className="max-w-lg">
-            <p className="text-meta-brand">{pricing.platformLabel}</p>
-            <p className="font-display mt-3 text-3xl font-semibold tracking-tight text-academy-navy text-numeric sm:text-4xl">
-              CHF {pricingAmounts.platform.priceChf}
-              <span className="text-lg font-medium text-academy-slate">
-                {" "}
-                / {pricing.platform.period}
-              </span>
-            </p>
-            <p className="text-body mt-3">{pricing.platform.description}</p>
-          </div>
-          <Button
-            href={siteConfig.links.platform}
-            external
-            variant="accent"
-            size="lg"
-            className="shrink-0 sm:min-w-[200px]"
-          >
-            {common.buttons.viewPlatform}
-          </Button>
-        </div>
-      </div>
+          return (
+            <AnimatedItem key={amount.id}>
+              <Card
+                highlight={amount.highlight}
+                className={cn(
+                  "flex h-full flex-col",
+                  amount.highlight && "relative z-[1] lg:-mt-1 lg:mb-1",
+                )}
+              >
+                {amount.highlight && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[color:var(--brand)] px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-white shadow-soft">
+                    {common.popular}
+                  </span>
+                )}
+
+                <p className="text-meta-brand">{copy.name}</p>
+                <h3 className="text-subheading mt-2 text-academy-navy">
+                  {copy.tagline}
+                </h3>
+                <p className="text-body mt-3">{copy.description}</p>
+
+                {isEssentials && "options" in amount && "options" in copy && (
+                  <ul className="mt-6 space-y-2.5 border-y border-academy-line py-5">
+                    {amount.options.map((option) => {
+                      const optionCopy = copy.options.find(
+                        (o) => o.id === option.id,
+                      )!;
+                      return (
+                        <li
+                          key={option.id}
+                          className="flex items-baseline justify-between gap-3 text-sm"
+                        >
+                          <span className="font-medium text-academy-navy">
+                            {optionCopy.label}
+                          </span>
+                          <span className="shrink-0 font-display text-lg font-semibold tabular-nums text-academy-navy">
+                            CHF {option.priceChf}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+
+                {!isEssentials && "priceChf" in amount && (
+                  <div className="mt-6 border-y border-academy-line py-5">
+                    <p className="font-display text-4xl font-semibold tracking-tight text-academy-navy text-numeric">
+                      CHF {amount.priceChf}
+                      <span className="text-base font-medium text-academy-slate">
+                        {" "}
+                        / {pricing.perMonth}
+                      </span>
+                    </p>
+                  </div>
+                )}
+
+                {"included" in copy && copy.included.length > 0 && (
+                  <div className="mt-5 flex-1">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-academy-slate-muted">
+                      {pricing.includedLabel}
+                    </p>
+                    <ul className="mt-3 space-y-2.5">
+                      {copy.included.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start gap-2.5 text-sm leading-snug text-academy-slate"
+                        >
+                          <Check
+                            className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand)]"
+                            strokeWidth={2.5}
+                            aria-hidden
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {"features" in copy && copy.features.length > 0 && (
+                  <ul className="mt-5 flex-1 space-y-2.5">
+                    {copy.features.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-2.5 text-sm leading-snug text-academy-slate"
+                      >
+                        <Check
+                          className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand)]"
+                          strokeWidth={2.5}
+                          aria-hidden
+                        />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <Button
+                  href={siteConfig.links.consultation}
+                  external
+                  variant={amount.highlight ? "accent" : "primary"}
+                  size="lg"
+                  className="mt-8 w-full"
+                >
+                  {copy.cta}
+                </Button>
+              </Card>
+            </AnimatedItem>
+          );
+        })}
+      </AnimatedGrid>
     </Section>
   );
 }

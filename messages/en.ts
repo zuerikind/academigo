@@ -199,15 +199,34 @@ export const en = {
   },
 
   platform: {
+    eyebrow: "Digital learning platform",
     title: "Learn between lessons too.",
     subtitle: "Our platform complements tutoring with interactive learning.",
     features: [
-      "Quiz questions",
-      "Exercises",
-      "Instant feedback",
-      "Learning progress",
-      "Error analysis",
-      "Exam preparation",
+      {
+        title: "Quiz questions",
+        description: "Leveled quizzes for every topic.",
+      },
+      {
+        title: "Exercises",
+        description: "Structured practice with clear goals.",
+      },
+      {
+        title: "Instant feedback",
+        description: "Immediate feedback after each answer.",
+      },
+      {
+        title: "Learning progress",
+        description: "XP, rank, and stats at a glance.",
+      },
+      {
+        title: "Error analysis",
+        description: "Spot weaknesses and practice with focus.",
+      },
+      {
+        title: "Exam preparation",
+        description: "Prepare efficiently for exams.",
+      },
     ],
   },
 
@@ -261,31 +280,62 @@ export const en = {
 
   pricing: {
     title: "Pricing",
-    platformLabel: "Platform",
-    lessons: [
+    perMonth: "month",
+    includedLabel: "Included:",
+    tiers: [
       {
-        id: "single",
-        name: "Single lesson",
+        id: "essentials",
+        name: "Academigo Essentials",
+        tagline: "Flexible support for targeted questions and short-term learning goals",
+        description:
+          "Ideal for students who need occasional support or want to deepen specific topics.",
+        options: [
+          { id: "single", label: "Single lesson (50 minutes)" },
+          { id: "pack5", label: "5-lesson package" },
+          { id: "pack10", label: "10-lesson package" },
+        ],
+        features: [
+          "Individual tutoring",
+          "Online or in person",
+          "Access to the Academigo learning platform",
+        ],
         cta: "Inquire",
-        description: "Ideal for specific topics or exams.",
       },
       {
-        id: "pack5",
-        name: "5-lesson package",
+        id: "plus",
+        name: "Academigo Plus",
+        tagline: "Regular support for sustainable progress",
+        description:
+          "For students who work on their performance continuously and want to close learning gaps systematically.",
+        included: [
+          "4 lessons per month",
+          "Personal learning plan",
+          "Access to the Academigo learning platform",
+          "Individual exercises and recommendations",
+          "Structured learning support",
+          "Ongoing adjustment of learning goals",
+        ],
         cta: "Get started",
-        description: "For focused preparation.",
       },
       {
-        id: "pack10",
-        name: "10-lesson package",
+        id: "excellence",
+        name: "Academigo Excellence",
+        tagline: "Comprehensive support for ambitious goals",
+        description:
+          "Our premium program for students who want to reach their full potential and achieve outstanding results long term.",
+        included: [
+          "8 lessons per month",
+          "Personal learning plan",
+          "Individual coaching and learning strategy",
+          "Regular progress analyses",
+          "Access to the Academigo learning platform",
+          "Priority scheduling",
+          "Individual exercises and learning materials",
+          "Long-term goal planning and academic mentoring",
+        ],
         cta: "Get started",
-        description: "Long-term support.",
       },
     ],
-    platform: {
-      period: "month",
-      description: "Interactive learning platform.",
-    },
   },
 
   process: {

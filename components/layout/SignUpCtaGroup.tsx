@@ -14,13 +14,17 @@ export function SignUpCtaGroup({
   size = "lg",
   className,
   vertical = false,
+  tone = "light",
 }: {
   locale: Locale;
   labels: Labels;
   size?: "sm" | "md" | "lg";
   className?: string;
   vertical?: boolean;
+  /** On dark brand panels: lighter student CTA, white teacher CTA */
+  tone?: "light" | "dark";
 }) {
+  const teacherVariant = tone === "dark" ? "secondary" : "primary";
   return (
     <div
       className={cn(
@@ -43,7 +47,7 @@ export function SignUpCtaGroup({
       <Button
         href={appSignupUrl(locale, "teacher")}
         external
-        variant="primary"
+        variant={teacherVariant}
         size={size}
         className="whitespace-nowrap"
         fullWidth={vertical}

@@ -37,7 +37,7 @@ function LogoTile({
 
 type BrandLogoProps = {
   brandName: string;
-  variant: "header" | "footer" | "hero";
+  variant: "header" | "footer";
   className?: string;
   priority?: boolean;
 };
@@ -68,67 +68,22 @@ export function BrandLogo({
     );
   }
 
-  if (variant === "hero") {
-    return (
-      <span
-        className={cn("inline-flex items-center gap-4", className)}
-        aria-label={brandName}
-      >
-        <Image
-          src={brandAssetPaths.icon}
-          alt=""
-          width={64}
-          height={64}
-          unoptimized
-          priority={priority}
-          className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
-          aria-hidden
-        />
-        <Image
-          src={brandAssetPaths.full}
-          alt=""
-          width={200}
-          height={80}
-          unoptimized
-          priority={priority}
-          className="hidden h-12 w-auto max-w-[200px] object-contain sm:block md:h-14 md:max-w-[240px]"
-          aria-hidden
-        />
-        <span className="font-display text-2xl font-bold tracking-tight text-academy-navy sm:hidden">
-          {brandName}
-        </span>
-      </span>
-    );
-  }
-
   return (
     <span
-      className={cn("inline-flex items-center gap-2.5 sm:gap-3", className)}
+      className={cn("inline-flex items-center", className)}
       aria-label={brandName}
     >
       <Image
-        src={brandAssetPaths.icon}
-        alt=""
-        width={48}
-        height={48}
-        unoptimized
-        priority={priority}
-        className="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11"
-        aria-hidden
-      />
-      <Image
         src={brandAssetPaths.full}
         alt=""
-        width={180}
-        height={72}
+        width={220}
+        height={88}
         unoptimized
         priority={priority}
-        className="hidden h-9 w-auto max-w-[160px] object-contain sm:block sm:h-10 sm:max-w-[180px] md:max-w-[200px]"
+        className="h-10 w-auto max-w-[180px] object-contain object-left sm:h-11 sm:max-w-[200px] md:h-12 md:max-w-[220px]"
         aria-hidden
       />
-      <span className="font-display text-lg font-bold tracking-tight text-academy-navy sm:text-xl">
-        {brandName}
-      </span>
+      <span className="sr-only">{brandName}</span>
     </span>
   );
 }
