@@ -3,7 +3,7 @@ export const de = {
     title: "Academigo — Nachhilfe & Lernplattform | Schweiz",
     titleTemplate: "%s | Academigo",
     description:
-      "Academigo verbindet persönliche Nachhilfe in Mathematik, Physik und Chemie mit einer eigenen digitalen Lernplattform. Online in der ganzen Schweiz und je nach Verfügbarkeit persönlich in verschiedenen Schweizer Städten.",
+      "Academigo: Nachhilfe in 22 Schulfächern plus eigene Lernplattform. Online in der Schweiz, vor Ort wo möglich.",
     keywords: [
       "Academigo Schweiz",
       "Nachhilfe Schweiz",
@@ -19,21 +19,21 @@ export const de = {
     category: "Bildung, Nachhilfe, Lernplattform",
     ogTitle: "Academigo — Nachhilfe & Lernplattform | Schweiz",
     ogTagline: "Persönliche Nachhilfe · Digitale Lernplattform",
-    ogSubjects: "Mathematik · Physik · Chemie · Schweiz",
+    ogSubjects: "22 Schulfächer · Schweiz",
     ogCta: "Kostenlose Beratung",
     ogImageAlt:
-      "Academigo — Nachhilfe und Lernplattform für Mathematik, Physik und Chemie in der Schweiz",
+      "Academigo — Nachhilfe und Lernplattform in der Schweiz",
     twitterTitle: "Academigo — Nachhilfe & Lernplattform",
     heroImageAlt:
       "Academigo Schüler-Dashboard mit Lernfortschritt, XP, Aufgaben und Notizen",
     footerSeo:
-      "Online Nachhilfe & Vor-Ort Nachhilfe in der Schweiz — Mathematik, Physik, Chemie.",
+      "Nachhilfe in der Schweiz — 22 Schulfächer, online und vor Ort.",
   },
 
   common: {
     brand: "Academigo",
-    heroCtaTitle: "Konto auf der Plattform erstellen",
-    heroCtaSubtitle: "Für Schüler/innen, Eltern und Lehrpersonen",
+    heroCtaTitle: "Konto erstellen",
+    heroCtaSubtitle: "Für Schüler, Eltern und Lehrpersonen",
     minutes: "Minuten",
     perLesson: "pro Lektion",
     popular: "Beliebt",
@@ -84,81 +84,70 @@ export const de = {
   },
 
   appSignup: {
-    eyebrow: "Academigo Plattform",
-    title: "Direkt auf der Plattform starten",
+    eyebrow: "Plattform",
+    title: "Hier starten",
     description:
-      "Schüler/innen und Eltern finden passende Lehrpersonen. Lehrpersonen können sich registrieren und Nachhilfe anbieten.",
+      "Schüler und Eltern finden Lehrpersonen. Lehrpersonen können sich anmelden und Unterricht anbieten.",
     signUpStudent: "Schüler/Eltern — Konto erstellen",
     signUpTeacher: "Lehrperson — Konto erstellen",
     signIn: "Bereits Konto? Anmelden",
   },
 
   hero: {
-    eyebrow: "Digitale Lernschule",
-    title: "Lernen neu gedacht. Persönlich. Digital. Individuell.",
-    lead: "Academigo verbindet persönliche Nachhilfe mit einer digitalen Lernplattform.",
+    eyebrow: "Nachhilfe & Lernplattform",
+    title: "Lehrperson finden. Dazwischen weiterlernen.",
+    lead: "Academigo verbindet Nachhilfe mit einer Lernplattform.",
     subjects:
-      "22 Schulfächer — von Mathematik und Physik über Sprachen und Geisteswissenschaften bis zu Kunst und Sport. Finde die passende Lehrperson, buche Lektionen und lerne mit einer Plattform, die dich zwischen den Stunden unterstützt.",
-    location:
-      "Online in der ganzen Schweiz und je nach Verfügbarkeit persönlich in verschiedenen Schweizer Städten.",
+      "22 Schulfächer: Mathe, Physik, Sprachen, Geisteswissenschaften, Kunst, Sport. Lehrperson wählen, Lektion buchen, dazwischen auf der Plattform üben.",
+    location: "Online in der ganzen Schweiz. Vor Ort, wo verfügbar.",
     trust: [
       { label: "10+ Jahre Erfahrung", icon: "Award" as const },
       { label: "30+ aktive Schüler", icon: "Users" as const },
-      {
-        label: "Online & vor Ort (je nach Verfügbarkeit)",
-        icon: "MapPin" as const,
-      },
+      { label: "Online & vor Ort", icon: "MapPin" as const },
       { label: "Eigene Lernplattform", icon: "Monitor" as const },
     ],
   },
 
   problem: {
-    title: "Viele Schüler lernen viel – aber oft nicht richtig.",
+    title: "Viel lernen hilft nicht immer.",
     subtitle:
-      "Viele Schwierigkeiten entstehen nicht wegen fehlender Intelligenz. Oft fehlen die richtigen Rahmenbedingungen — und daraus entstehen Lernlücken und Prüfungsstress.",
+      "Oft fehlt nicht Talent, sondern Struktur. Dann entstehen Lücken – und Stress vor Prüfungen.",
     points: [
       {
         title: "Struktur",
-        description: "Ein klarer Lernweg fehlt — Themen wirken unverbunden.",
+        description: "Themen hängen lose zusammen. Ein roter Faden fehlt.",
       },
       {
-        title: "Individuelle Erklärungen",
-        description:
-          "Standarderklärungen passen selten zum eigenen Verständnis.",
+        title: "Erklärungen",
+        description: "Standardlösungen passen selten zu dir.",
       },
       {
-        title: "Gezielte Unterstützung",
-        description: "Ohne Begleitung bleiben Schwächen lange unerkannt.",
+        title: "Begleitung",
+        description: "Schwächen bleiben zu lange unbemerkt.",
       },
       {
-        title: "Kontinuierliches Üben",
-        description:
-          "Zwischen den Lektionen fehlt oft die regelmässige Vertiefung.",
+        title: "Üben",
+        description: "Zwischen den Lektionen passiert zu wenig.",
       },
     ],
-    closing:
-      "Dadurch entstehen Lernlücken und Prüfungsstress — genau hier setzt Academigo an.",
+    closing: "Genau hier setzt Academigo an.",
   },
 
   system: {
     title: "Mehr als klassische Nachhilfe.",
-    subtitle:
-      "Academigo verbindet Unterricht, Lernplattform und individuelle Begleitung.",
+    subtitle: "Unterricht, Plattform und Begleitung aus einer Hand.",
     pillars: [
       {
         title: "Analyse",
-        description:
-          "Wir identifizieren Lernlücken und definieren klare Ziele.",
+        description: "Lücken erkennen. Ziele festlegen.",
       },
       {
-        title: "Persönlicher Unterricht",
-        description:
-          "Individuelle Betreuung angepasst an Niveau und Lerntempo.",
+        title: "Unterricht",
+        description: "1:1-Betreuung nach deinem Niveau und Tempo.",
       },
       {
-        title: "Digitale Plattform",
-        description:
-          "Zwischen den Lektionen weiterlernen mit Übungen, Quiz und Feedback.",
+        title: "Plattform",
+        description: "Üben, Quiz, Feedback – auch zwischen den Lektionen.",
       },
     ],
     flow: ["Analyse", "Unterricht", "Plattform", "Fortschritt"],
@@ -168,27 +157,24 @@ export const de = {
   subjects: {
     title: "22 Schulfächer",
     subtitle:
-      "22 Schulfächer — von Mathematik und Physik über Sprachen und Geisteswissenschaften bis zu Kunst und Sport. Finde die passende Lehrperson, buche Lektionen und lerne mit einer Plattform, die dich zwischen den Stunden unterstützt.",
-    expansionNote: "Von Naturwissenschaften über Sprachen bis Kunst und Sport.",
-    plannedLabel: "Geplante Erweiterungen:",
+      "Von Mathe über Sprachen bis Kunst und Sport. Lehrperson finden, buchen, dazwischen üben.",
+    expansionNote: "Und viele weitere Fächer dazu.",
+    plannedLabel: "Beispiele:",
     active: [
       {
         id: "math",
         name: "Mathematik",
-        description:
-          "Von Grundlagen bis Gymnasium und Matura — strukturiert, verständlich und praxisnah.",
+        description: "Grundlagen bis Matura – Schritt für Schritt.",
       },
       {
         id: "physics",
         name: "Physik",
-        description:
-          "Zusammenhänge verstehen statt Formeln auswendig lernen — mit klarer Methodik.",
+        description: "Verstehen statt Auswendiglernen.",
       },
       {
         id: "chemistry",
         name: "Chemie",
-        description:
-          "Stoffe, Reaktionen und Berechnungen sicher beherrschen — Schritt für Schritt.",
+        description: "Reaktionen, Stoffe, Rechnungen – sicher werden.",
       },
     ],
     comingSoon: [
@@ -202,81 +188,79 @@ export const de = {
   },
 
   platform: {
-    eyebrow: "Digitale Lernplattform",
-    title: "Lernen auch zwischen den Lektionen.",
-    subtitle: "Unsere Plattform ergänzt die Nachhilfe durch interaktives Lernen.",
+    eyebrow: "Lernplattform",
+    title: "Auch zwischen den Lektionen.",
+    subtitle: "Quiz, Aufgaben und Feedback – direkt online.",
     features: [
       {
         title: "Quizfragen",
-        description: "Abgestufte Quiz-Level zu jedem Thema.",
+        description: "Level für jedes Thema.",
       },
       {
         title: "Aufgaben",
-        description: "Strukturierte Übungen mit klaren Zielen.",
+        description: "Übungen mit klarem Ziel.",
       },
       {
         title: "Sofortiges Feedback",
-        description: "Direkte Rückmeldung nach jeder Antwort.",
+        description: "Direkt nach jeder Antwort.",
       },
       {
         title: "Lernfortschritt",
-        description: "XP, Rang und Statistiken im Überblick.",
+        description: "XP, Rang, Statistik.",
       },
       {
         title: "Fehleranalyse",
-        description: "Schwächen erkennen und gezielt üben.",
+        description: "Sieh, wo es hakt.",
       },
       {
         title: "Prüfungsvorbereitung",
-        description: "Gezielt auf Prüfungen vorbereiten.",
+        description: "Gezielt üben fürs Examen.",
       },
     ],
   },
 
   services: {
-    title: "Unsere Angebote",
+    title: "Angebote",
     items: [
       {
         id: "online",
-        title: "Online Nachhilfe",
-        description:
-          "In der ganzen Schweiz — flexibel, persönlich und strukturiert.",
+        title: "Online-Nachhilfe",
+        description: "Flexibel, überall in der Schweiz.",
       },
       {
         id: "zurich",
-        title: "Persönlicher Unterricht vor Ort",
-        description:
-          "Je nach Verfügbarkeit in verschiedenen Schweizer Städten — individuell und persönlich.",
+        title: "Vor Ort",
+        description: "Persönlich, wo Termine frei sind.",
       },
       {
         id: "gymi",
         title: "Gymivorbereitung",
-        description: "Gezielte Vorbereitung auf die Aufnahmeprüfung.",
+        description: "Aufnahmeprüfung gezielt vorbereiten.",
       },
       {
         id: "matura",
         title: "Maturavorbereitung",
-        description: "Systematische Vorbereitung auf die Maturaprüfungen.",
+        description: "Systematisch Richtung Matura.",
       },
       {
         id: "exam",
         title: "Prüfungsvorbereitung",
-        description: "Kurzfristige und langfristige Prüfungsstrategien.",
+        description: "Kurz vor der Prüfung oder langfristig.",
       },
       {
         id: "longterm",
         title: "Langfristige Begleitung",
-        description: "Kontinuierliche Förderung über das ganze Schuljahr.",
+        description: "Über das ganze Schuljahr.",
       },
       {
         id: "platform",
         title: "Lernplattform",
-        description: "Üben, Quiz und Feedback zwischen den Lektionen.",
+        description: "Üben zwischen den Lektionen.",
       },
       {
         id: "plans",
-        title: "Persönliche Lernpläne",
-        description: "Individuelle Ziele und klare Lernwege.",
+        title: "Lernpläne",
+        description: "Klare Ziele, klarer Weg.",
       },
     ],
   },
@@ -289,52 +273,50 @@ export const de = {
       {
         id: "essentials",
         name: "Academigo Essentials",
-        tagline: "Flexible Unterstützung für gezielte Fragen und kurzfristige Lernziele",
+        tagline: "Für einzelne Themen und kurze Fragen",
         description:
-          "Ideal für Schülerinnen und Schüler, die punktuelle Unterstützung benötigen oder einzelne Themen gezielt vertiefen möchten.",
+          "Wenn du punktuell Hilfe brauchst oder ein Thema vertiefen willst.",
         options: [
           { id: "single", label: "Einzelstunde (50 Minuten)" },
           { id: "pack5", label: "5er-Paket" },
           { id: "pack10", label: "10er-Paket" },
         ],
         features: [
-          "Individuelle Betreuung",
+          "1:1-Betreuung",
           "Online oder vor Ort",
-          "Zugang zur Academigo Lernplattform",
+          "Plattform inklusive",
         ],
         cta: "Anfragen",
       },
       {
         id: "plus",
         name: "Academigo Plus",
-        tagline: "Regelmässige Begleitung für nachhaltige Fortschritte",
-        description:
-          "Für Schülerinnen und Schüler, die kontinuierlich an ihren Leistungen arbeiten und Lernlücken systematisch schliessen möchten.",
+        tagline: "Regelmässig lernen, dranbleiben",
+        description: "Für alle, die kontinuierlich Fortschritte machen wollen.",
         included: [
           "4 Lektionen pro Monat",
           "Persönlicher Lernplan",
-          "Zugang zur Academigo Lernplattform",
-          "Individuelle Übungen und Empfehlungen",
-          "Strukturierte Lernbegleitung",
-          "Laufende Anpassung der Lernziele",
+          "Plattform inklusive",
+          "Übungen nach Mass",
+          "Regelmässige Begleitung",
+          "Ziele werden laufend angepasst",
         ],
         cta: "Starten",
       },
       {
         id: "excellence",
         name: "Academigo Excellence",
-        tagline: "Umfassende Förderung für ambitionierte Ziele",
-        description:
-          "Unser Premium-Programm für Schülerinnen und Schüler, die ihr volles Potenzial ausschöpfen und langfristig hervorragende Leistungen erzielen möchten.",
+        tagline: "Intensive Begleitung",
+        description: "Für grosse Ziele und enge Betreuung.",
         included: [
           "8 Lektionen pro Monat",
           "Persönlicher Lernplan",
-          "Individuelle Förderung und Lernstrategie",
-          "Regelmässige Fortschrittsanalysen",
-          "Zugang zur Academigo Lernplattform",
-          "Priorisierte Terminvergabe",
-          "Individuelle Übungen und Lernmaterialien",
-          "Langfristige Zielplanung und akademische Begleitung",
+          "Eigene Lernstrategie",
+          "Regelmässige Fortschrittschecks",
+          "Plattform inklusive",
+          "Bevorzugte Termine",
+          "Übungen und Material",
+          "Langfristige Zielplanung",
         ],
         cta: "Starten",
       },
@@ -343,64 +325,76 @@ export const de = {
 
   process: {
     eyebrow: "Ablauf",
-    title: "So funktioniert Academigo",
+    title: "So läuft's",
     steps: [
       {
-        title: "Kostenlose Anfrage",
-        description: "Schreib uns — wir melden uns zeitnah bei dir.",
+        title: "Anfrage",
+        description: "Schreib uns. Wir melden uns.",
       },
       {
-        title: "Analyse und Zieldefinition",
-        description: "Wir identifizieren Lernlücken und legen klare Ziele fest.",
+        title: "Analyse",
+        description: "Lücken und Ziele klären.",
       },
       {
-        title: "Passender Unterricht",
-        description: "Individuelle Lektionen, angepasst an Niveau und Tempo.",
+        title: "Unterricht",
+        description: "Lektionen passend zu dir.",
       },
       {
-        title: "Plattform + Fortschritt",
-        description: "Zwischen den Lektionen üben, tracken und verbessern.",
+        title: "Plattform",
+        description: "Dazwischen üben und Fortschritt sehen.",
       },
     ],
   },
 
   testimonials: {
-    title: "Stimmen unserer Schüler",
+    title: "Das sagen Schüler",
     items: [
       {
         id: "gymnasiastin-1",
         quote:
-          "Vor Academigo habe ich vieles auswendig gelernt. Jetzt verstehe ich die Zusammenhänge und meine Leistungen haben sich deutlich verbessert.",
+          "Früher hab ich viel auswendig gelernt. Jetzt verstehe ich endlich, wie es zusammenhängt.",
         role: "Gymnasiastin",
       },
       {
         id: "gymi-2",
         quote:
-          "Die Kombination aus persönlichem Unterricht und der Plattform hat mir geholfen, gezielt an meinen Schwächen zu arbeiten — besonders vor der Prüfung.",
+          "Unterricht plus Plattform – so konnte ich vor der Prüfung genau an meinen Schwächen arbeiten.",
         role: "Gymivorbereitung",
       },
       {
         id: "parent-3",
         quote:
-          "Wir schätzen die transparente Begleitung und den Fortschritt, den man auf der Plattform jederzeit nachvollziehen kann.",
+          "Man sieht auf der Plattform, was läuft. Das gibt uns Sicherheit.",
         role: "Elternteil",
       },
     ],
   },
 
   vision: {
-    title: "Wir bauen die Lernschule der Zukunft.",
-    paragraphs: [
-      "Academigo startet mit Mathematik, Physik und Chemie.",
-      "Langfristig entsteht eine Academy für alle Schulfächer mit Lehrpersonen, digitaler Lernplattform und individueller Förderung.",
+    eyebrow: "Vision",
+    title: "Die Lernschule der Zukunft.",
+    lead: "Lehrpersonen, 22 Fächer, eine Plattform. Lernen, das über die Lektion hinausgeht.",
+    pillars: [
+      {
+        title: "22 Schulfächer",
+        description: "Mathe, Sprachen, Geisteswissenschaften, Kunst, Sport.",
+      },
+      {
+        title: "Lehrpersonen",
+        description: "Finden, buchen, in deinem Tempo lernen.",
+      },
+      {
+        title: "Lernplattform",
+        description: "Üben und Feedback – jederzeit.",
+      },
     ],
-    goal: "Ziel: Persönliches Lernen neu definieren.",
+    goalLabel: "Unser Ziel",
+    goal: "Persönliches Lernen neu definieren.",
   },
 
   finalCta: {
-    title: "Bereit für den nächsten Schritt?",
-    description:
-      "Schreib uns direkt und wir schauen gemeinsam, wie wir dich unterstützen können.",
+    title: "Lust auf den nächsten Schritt?",
+    description: "Schreib uns. Wir schauen gemeinsam, was für dich passt.",
   },
 
   dashboard: {
@@ -430,34 +424,26 @@ export const de = {
       {
         id: "overview",
         title: "Übersicht",
-        description:
-          "Gesamter Lernfortschritt, XP und offene Aufgaben auf einen Blick.",
-        imageAlt:
-          "Academigo Dashboard Übersicht mit Lernfortschritt, XP und offenen Aufgaben",
+        description: "Fortschritt, XP und offene Aufgaben.",
+        imageAlt: "Academigo Dashboard mit Lernfortschritt und XP",
       },
       {
         id: "quiz",
         title: "Quiz",
-        description:
-          "Interaktive Quiz-Fragen mit sofortigem Feedback und klarer Prüfungsvorbereitung.",
-        imageAlt:
-          "Academigo Quiz-Ansicht mit interaktiven Mathematikfragen und Feedback",
+        description: "Fragen üben, sofort Feedback bekommen.",
+        imageAlt: "Academigo Quiz mit Mathefragen",
       },
       {
         id: "aufgaben",
         title: "Aufgaben",
-        description:
-          "Strukturierte Aufgabenbibliothek nach Themen und Schwierigkeitsgrad.",
-        imageAlt:
-          "Academigo Aufgabenbereich mit Mathematik-Themen und Lernfortschritt",
+        description: "Übungen nach Thema und Level.",
+        imageAlt: "Academigo Aufgabenbereich",
       },
       {
         id: "leaderboard",
         title: "Abzeichen",
-        description:
-          "Bestenliste und Abzeichen für Motivation und messbaren Fortschritt.",
-        imageAlt:
-          "Academigo Bestenliste und Abzeichen für Schülerfortschritt",
+        description: "Rangliste und Abzeichen für Motivation.",
+        imageAlt: "Academigo Bestenliste und Abzeichen",
       },
     ],
   },

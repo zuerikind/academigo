@@ -3,7 +3,7 @@ export const en = {
     title: "Academigo — Tutoring & Learning Platform | Switzerland",
     titleTemplate: "%s | Academigo",
     description:
-      "Academigo combines personal tutoring in mathematics, physics, and chemistry with a dedicated digital learning platform. Online across Switzerland and, subject to availability, in person in various Swiss cities.",
+      "Academigo: tutoring in 22 school subjects plus a learning platform. Online across Switzerland, in person where available.",
     keywords: [
       "Academigo Switzerland",
       "Tutoring Switzerland",
@@ -19,20 +19,20 @@ export const en = {
     category: "Education, Tutoring, Learning platform",
     ogTitle: "Academigo — Tutoring & Learning Platform | Switzerland",
     ogTagline: "Personal tutoring · Digital learning platform",
-    ogSubjects: "Math · Physics · Chemistry · Switzerland",
+    ogSubjects: "22 subjects · Switzerland",
     ogCta: "Free consultation",
     ogImageAlt:
-      "Academigo — tutoring and learning platform for math, physics, and chemistry in Switzerland",
+      "Academigo — tutoring and learning platform in Switzerland",
     twitterTitle: "Academigo — Tutoring & Learning Platform",
     heroImageAlt:
       "Academigo student dashboard showing learning progress, XP, tasks, and notes",
     footerSeo:
-      "Online tutoring & in-person tutoring in Switzerland — mathematics, physics, chemistry.",
+      "Tutoring in Switzerland — 22 subjects, online and in person.",
   },
 
   common: {
     brand: "Academigo",
-    heroCtaTitle: "Create your platform account",
+    heroCtaTitle: "Create an account",
     heroCtaSubtitle: "For students, parents, and teachers",
     minutes: "minutes",
     perLesson: "per lesson",
@@ -84,80 +84,70 @@ export const en = {
   },
 
   appSignup: {
-    eyebrow: "Academigo platform",
-    title: "Get started on the platform",
+    eyebrow: "Platform",
+    title: "Start here",
     description:
-      "Students and parents find the right teachers. Teachers can register and offer tutoring.",
+      "Students and parents find teachers. Teachers can sign up and offer lessons.",
     signUpStudent: "Students & parents — create account",
     signUpTeacher: "Teachers — create account",
     signIn: "Already have an account? Sign in",
   },
 
   hero: {
-    eyebrow: "Digital learning academy",
-    title: "Learning reimagined. Personal. Digital. Individual.",
-    lead: "Academigo combines personal tutoring with a digital learning platform.",
+    eyebrow: "Tutoring & learning platform",
+    title: "Find a teacher. Keep learning in between.",
+    lead: "Academigo pairs tutoring with a learning platform.",
     subjects:
-      "22 school subjects — from mathematics and physics to languages and humanities, art and sport. Find the right teacher, book lessons, and learn with a platform that supports you between sessions.",
-    location:
-      "Online across Switzerland and, subject to availability, in person in various Swiss cities.",
+      "22 subjects: math, physics, languages, humanities, art, sport. Pick a teacher, book lessons, practice on the platform between sessions.",
+    location: "Online across Switzerland. In person where available.",
     trust: [
       { label: "10+ years of experience", icon: "Award" as const },
       { label: "30+ active students", icon: "Users" as const },
-      {
-        label: "Online & in person (subject to availability)",
-        icon: "MapPin" as const,
-      },
+      { label: "Online & in person", icon: "MapPin" as const },
       { label: "Own learning platform", icon: "Monitor" as const },
     ],
   },
 
   problem: {
-    title: "Many students study a lot — but often not effectively.",
+    title: "Studying more doesn't always help.",
     subtitle:
-      "Many difficulties are not caused by a lack of intelligence. Often the right framework is missing — which leads to learning gaps and exam stress.",
+      "Often it's not about talent — it's about structure. That's when gaps and exam stress show up.",
     points: [
       {
         title: "Structure",
-        description: "A clear learning path is missing — topics feel disconnected.",
+        description: "Topics feel disconnected. There's no clear path.",
       },
       {
-        title: "Individual explanations",
-        description:
-          "Standard explanations rarely match how a student actually thinks.",
+        title: "Explanations",
+        description: "Generic answers rarely fit how you think.",
       },
       {
-        title: "Targeted support",
-        description: "Without guidance, weaknesses often go unnoticed for too long.",
+        title: "Support",
+        description: "Weak spots stay hidden for too long.",
       },
       {
-        title: "Continuous practice",
-        description:
-          "Between lessons, regular reinforcement is often missing.",
+        title: "Practice",
+        description: "Not enough happens between lessons.",
       },
     ],
-    closing:
-      "This creates learning gaps and exam stress — exactly where Academigo steps in.",
+    closing: "That's where Academigo comes in.",
   },
 
   system: {
-    title: "More than traditional tutoring.",
-    subtitle:
-      "Academigo connects lessons, a learning platform, and individual support.",
+    title: "More than regular tutoring.",
+    subtitle: "Lessons, platform, and support in one place.",
     pillars: [
       {
         title: "Assessment",
-        description: "We identify learning gaps and define clear goals.",
+        description: "Spot gaps. Set goals.",
       },
       {
-        title: "Personal tutoring",
-        description:
-          "Individual support tailored to level and learning pace.",
+        title: "Tutoring",
+        description: "1:1 support at your level and pace.",
       },
       {
-        title: "Digital platform",
-        description:
-          "Keep learning between lessons with exercises, quizzes, and feedback.",
+        title: "Platform",
+        description: "Practice, quizzes, feedback — between lessons too.",
       },
     ],
     flow: ["Assessment", "Tutoring", "Platform", "Progress"],
@@ -167,27 +157,24 @@ export const en = {
   subjects: {
     title: "22 school subjects",
     subtitle:
-      "22 school subjects — from mathematics and physics to languages and humanities, art and sport. Find the right teacher, book lessons, and learn with a platform that supports you between sessions.",
-    expansionNote: "From science and languages to art and sport.",
-    plannedLabel: "Planned additions:",
+      "From math and languages to art and sport. Find a teacher, book lessons, practice in between.",
+    expansionNote: "Plus many more subjects.",
+    plannedLabel: "Examples:",
     active: [
       {
         id: "math",
         name: "Mathematics",
-        description:
-          "From fundamentals to gymnasium and Matura — structured, clear, and practical.",
+        description: "Basics through Matura — step by step.",
       },
       {
         id: "physics",
         name: "Physics",
-        description:
-          "Understand connections instead of memorizing formulas — with a clear methodology.",
+        description: "Understand it, don't just memorize.",
       },
       {
         id: "chemistry",
         name: "Chemistry",
-        description:
-          "Master substances, reactions, and calculations — step by step.",
+        description: "Reactions, substances, calculations — with confidence.",
       },
     ],
     comingSoon: [
@@ -201,81 +188,79 @@ export const en = {
   },
 
   platform: {
-    eyebrow: "Digital learning platform",
-    title: "Learn between lessons too.",
-    subtitle: "Our platform complements tutoring with interactive learning.",
+    eyebrow: "Learning platform",
+    title: "Between lessons too.",
+    subtitle: "Quizzes, tasks, and feedback — online.",
     features: [
       {
         title: "Quiz questions",
-        description: "Leveled quizzes for every topic.",
+        description: "Levels for every topic.",
       },
       {
         title: "Exercises",
-        description: "Structured practice with clear goals.",
+        description: "Practice with a clear goal.",
       },
       {
         title: "Instant feedback",
-        description: "Immediate feedback after each answer.",
+        description: "Right after each answer.",
       },
       {
         title: "Learning progress",
-        description: "XP, rank, and stats at a glance.",
+        description: "XP, rank, stats.",
       },
       {
         title: "Error analysis",
-        description: "Spot weaknesses and practice with focus.",
+        description: "See where you get stuck.",
       },
       {
         title: "Exam preparation",
-        description: "Prepare efficiently for exams.",
+        description: "Focused practice for exams.",
       },
     ],
   },
 
   services: {
-    title: "Our services",
+    title: "Services",
     items: [
       {
         id: "online",
         title: "Online tutoring",
-        description:
-          "Across Switzerland — flexible, personal, and structured.",
+        description: "Flexible, anywhere in Switzerland.",
       },
       {
         id: "zurich",
-        title: "In-person tutoring",
-        description:
-          "Subject to availability in various Swiss cities — individual and personal support.",
+        title: "In person",
+        description: "Face to face, where slots are open.",
       },
       {
         id: "gymi",
-        title: "Gymnasium entrance exam prep",
-        description: "Focused preparation for the entrance examination.",
+        title: "Gymnasium entrance prep",
+        description: "Focused prep for the entrance exam.",
       },
       {
         id: "matura",
-        title: "Matura exam preparation",
-        description: "Systematic preparation for Matura examinations.",
+        title: "Matura prep",
+        description: "Working toward Matura, step by step.",
       },
       {
         id: "exam",
-        title: "Exam preparation",
-        description: "Short-term and long-term exam strategies.",
+        title: "Exam prep",
+        description: "Last-minute or long-term.",
       },
       {
         id: "longterm",
         title: "Long-term support",
-        description: "Continuous guidance throughout the school year.",
+        description: "Through the school year.",
       },
       {
         id: "platform",
         title: "Learning platform",
-        description: "Practice, quizzes, and feedback between lessons.",
+        description: "Practice between lessons.",
       },
       {
         id: "plans",
-        title: "Personal learning plans",
-        description: "Individual goals and clear learning paths.",
+        title: "Learning plans",
+        description: "Clear goals, clear path.",
       },
     ],
   },
@@ -288,52 +273,49 @@ export const en = {
       {
         id: "essentials",
         name: "Academigo Essentials",
-        tagline: "Flexible support for targeted questions and short-term learning goals",
-        description:
-          "Ideal for students who need occasional support or want to deepen specific topics.",
+        tagline: "For specific topics and quick questions",
+        description: "When you need help once or want to go deeper on one topic.",
         options: [
           { id: "single", label: "Single lesson (50 minutes)" },
           { id: "pack5", label: "5-lesson package" },
           { id: "pack10", label: "10-lesson package" },
         ],
         features: [
-          "Individual tutoring",
+          "1:1 tutoring",
           "Online or in person",
-          "Access to the Academigo learning platform",
+          "Platform included",
         ],
         cta: "Inquire",
       },
       {
         id: "plus",
         name: "Academigo Plus",
-        tagline: "Regular support for sustainable progress",
-        description:
-          "For students who work on their performance continuously and want to close learning gaps systematically.",
+        tagline: "Learn regularly, stay on track",
+        description: "For students who want steady progress.",
         included: [
           "4 lessons per month",
           "Personal learning plan",
-          "Access to the Academigo learning platform",
-          "Individual exercises and recommendations",
-          "Structured learning support",
-          "Ongoing adjustment of learning goals",
+          "Platform included",
+          "Tailored exercises",
+          "Regular check-ins",
+          "Goals updated as you go",
         ],
         cta: "Get started",
       },
       {
         id: "excellence",
         name: "Academigo Excellence",
-        tagline: "Comprehensive support for ambitious goals",
-        description:
-          "Our premium program for students who want to reach their full potential and achieve outstanding results long term.",
+        tagline: "Intensive support",
+        description: "For big goals and close guidance.",
         included: [
           "8 lessons per month",
           "Personal learning plan",
-          "Individual coaching and learning strategy",
-          "Regular progress analyses",
-          "Access to the Academigo learning platform",
+          "Personal learning strategy",
+          "Regular progress checks",
+          "Platform included",
           "Priority scheduling",
-          "Individual exercises and learning materials",
-          "Long-term goal planning and academic mentoring",
+          "Exercises and materials",
+          "Long-term goal planning",
         ],
         cta: "Get started",
       },
@@ -342,64 +324,76 @@ export const en = {
 
   process: {
     eyebrow: "Process",
-    title: "How Academigo works",
+    title: "How it works",
     steps: [
       {
-        title: "Free inquiry",
-        description: "Contact us — we will get back to you promptly.",
+        title: "Get in touch",
+        description: "Write to us. We'll reply.",
       },
       {
-        title: "Assessment and goal setting",
-        description: "We identify learning gaps and set clear goals.",
+        title: "Assessment",
+        description: "Find gaps. Set goals.",
       },
       {
-        title: "Matching tutoring",
-        description: "Individual lessons adapted to level and pace.",
+        title: "Lessons",
+        description: "Tutoring that fits you.",
       },
       {
-        title: "Platform + progress",
-        description: "Practice, track, and improve between lessons.",
+        title: "Platform",
+        description: "Practice and track progress between sessions.",
       },
     ],
   },
 
   testimonials: {
-    title: "What our students say",
+    title: "What students say",
     items: [
       {
         id: "gymnasiastin-1",
         quote:
-          "Before Academigo I memorized a lot by heart. Now I understand the connections and my performance has improved significantly.",
+          "I used to memorize everything. Now I actually get how it fits together.",
         role: "Gymnasium student",
       },
       {
         id: "gymi-2",
         quote:
-          "The combination of personal tutoring and the platform helped me work on my weaknesses — especially before the exam.",
-        role: "Entrance exam preparation",
+          "Lessons plus the platform — that's what helped me before the exam.",
+        role: "Entrance exam prep",
       },
       {
         id: "parent-3",
         quote:
-          "We appreciate the transparent support and being able to follow progress on the platform at any time.",
+          "You can see progress on the platform. That gives us peace of mind.",
         role: "Parent",
       },
     ],
   },
 
   vision: {
-    title: "We are building the school of the future.",
-    paragraphs: [
-      "Academigo starts with mathematics, physics, and chemistry.",
-      "In the long term, we are creating an academy for all school subjects with teachers, a digital learning platform, and individual support.",
+    eyebrow: "Vision",
+    title: "The school of the future.",
+    lead: "Teachers, 22 subjects, one platform. Learning that goes beyond the lesson.",
+    pillars: [
+      {
+        title: "22 subjects",
+        description: "Math, languages, humanities, art, sport.",
+      },
+      {
+        title: "Teachers",
+        description: "Find them, book lessons, learn at your pace.",
+      },
+      {
+        title: "Learning platform",
+        description: "Practice and feedback — anytime.",
+      },
     ],
-    goal: "Our goal: redefine personal learning.",
+    goalLabel: "Our goal",
+    goal: "Redefine personal learning.",
   },
 
   finalCta: {
-    title: "Ready for the next step?",
-    description:
-      "Message us directly and together we will find out how we can support you.",
+    title: "Ready to take the next step?",
+    description: "Message us. We'll figure out what works for you.",
   },
 
   dashboard: {
@@ -429,34 +423,26 @@ export const en = {
       {
         id: "overview",
         title: "Overview",
-        description:
-          "A complete view of progress, XP, and open tasks in one place.",
-        imageAlt:
-          "Academigo dashboard overview with learning progress, XP, and open tasks",
+        description: "Progress, XP, and open tasks.",
+        imageAlt: "Academigo dashboard with learning progress and XP",
       },
       {
         id: "quiz",
         title: "Quiz",
-        description:
-          "Interactive quiz questions with instant feedback and exam-focused practice.",
-        imageAlt:
-          "Academigo quiz view with interactive math questions and feedback",
+        description: "Practice questions, get instant feedback.",
+        imageAlt: "Academigo quiz with math questions",
       },
       {
         id: "aufgaben",
         title: "Exercises",
-        description:
-          "Structured exercise library by topic and difficulty level.",
-        imageAlt:
-          "Academigo exercises view with math topics and learning progress",
+        description: "Tasks by topic and level.",
+        imageAlt: "Academigo exercises view",
       },
       {
         id: "leaderboard",
         title: "Badges",
-        description:
-          "Leaderboard and badges to boost motivation and track measurable progress.",
-        imageAlt:
-          "Academigo leaderboard and student achievement badges",
+        description: "Leaderboard and badges for motivation.",
+        imageAlt: "Academigo leaderboard and badges",
       },
     ],
   },
