@@ -13,7 +13,7 @@ export function SubjectsSection({
   common: Dictionary["common"];
 }) {
   return (
-    <Section id="subjects" title={dict.title} variant="mist">
+    <Section id="subjects" title={dict.title} subtitle={dict.subtitle} variant="mist">
       <div className="grid gap-8 lg:grid-cols-[1fr_300px] lg:gap-10">
         <AnimatedGrid className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {dict.active.map((subject) => (

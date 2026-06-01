@@ -98,7 +98,7 @@ export const de = {
     title: "Lernen neu gedacht. Persönlich. Digital. Individuell.",
     lead: "Academigo verbindet persönliche Nachhilfe mit einer digitalen Lernplattform.",
     subjects:
-      "Aktuell bieten wir Nachhilfe in Mathematik, Physik und Chemie an. Weitere Fächer werden laufend ergänzt.",
+      "22 Schulfächer — von Mathematik und Physik über Sprachen und Geisteswissenschaften bis zu Kunst und Sport. Finde die passende Lehrperson, buche Lektionen und lerne mit einer Plattform, die dich zwischen den Stunden unterstützt.",
     location:
       "Online in der ganzen Schweiz und je nach Verfügbarkeit persönlich in verschiedenen Schweizer Städten.",
     trust: [
@@ -166,8 +166,10 @@ export const de = {
   },
 
   subjects: {
-    title: "Aktuell verfügbare Fächer",
-    expansionNote: "Academigo wird laufend erweitert.",
+    title: "22 Schulfächer",
+    subtitle:
+      "22 Schulfächer — von Mathematik und Physik über Sprachen und Geisteswissenschaften bis zu Kunst und Sport. Finde die passende Lehrperson, buche Lektionen und lerne mit einer Plattform, die dich zwischen den Stunden unterstützt.",
+    expansionNote: "Von Naturwissenschaften über Sprachen bis Kunst und Sport.",
     plannedLabel: "Geplante Erweiterungen:",
     active: [
       {

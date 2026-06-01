@@ -98,7 +98,7 @@ export const en = {
     title: "Learning reimagined. Personal. Digital. Individual.",
     lead: "Academigo combines personal tutoring with a digital learning platform.",
     subjects:
-      "We currently offer tutoring in mathematics, physics, and chemistry. More subjects are being added on an ongoing basis.",
+      "22 school subjects — from mathematics and physics to languages and humanities, art and sport. Find the right teacher, book lessons, and learn with a platform that supports you between sessions.",
     location:
       "Online across Switzerland and, subject to availability, in person in various Swiss cities.",
     trust: [
@@ -165,8 +165,10 @@ export const en = {
   },
 
   subjects: {
-    title: "Currently available subjects",
-    expansionNote: "Academigo is expanding continuously.",
+    title: "22 school subjects",
+    subtitle:
+      "22 school subjects — from mathematics and physics to languages and humanities, art and sport. Find the right teacher, book lessons, and learn with a platform that supports you between sessions.",
+    expansionNote: "From science and languages to art and sport.",
     plannedLabel: "Planned additions:",
     active: [
       {
