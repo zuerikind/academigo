@@ -90,7 +90,7 @@ export const en = {
       "Students and parents find teachers. Teachers can sign up and offer lessons.",
     signUpStudent: "Students & parents — create account",
     signUpTeacher: "Teachers — create account",
-    signIn: "Already have an account? Sign in",
+    signIn: "Already have an account? Login",
   },
 
   hero: {

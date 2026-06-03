@@ -97,7 +97,7 @@ function PlatformScreenshots({ dashboard }: { dashboard: Dictionary["dashboard"]
           <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
         </span>
         <span className="mx-auto min-w-0 truncate rounded-md border border-academy-line/80 bg-white px-3 py-1 text-center text-[11px] font-medium text-academy-slate-muted">
-          app.academigo.xyz
+          platform.mathetogo.xyz
         </span>
       </div>
 

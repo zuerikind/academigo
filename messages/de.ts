@@ -90,7 +90,7 @@ export const de = {
       "Schüler und Eltern finden Lehrpersonen. Lehrpersonen können sich anmelden und Unterricht anbieten.",
     signUpStudent: "Schüler/Eltern — Konto erstellen",
     signUpTeacher: "Lehrperson — Konto erstellen",
-    signIn: "Bereits Konto? Anmelden",
+    signIn: "Hast du bereits ein Konto? Login",
   },
 
   hero: {
