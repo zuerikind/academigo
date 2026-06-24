@@ -9,6 +9,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://academigo.xyz"),
   manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/brand/logo-icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/brand/logo-icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
+    shortcut: "/brand/logo-icon.png",
+  },
   appleWebApp: {
     capable: true,
     title: "Academigo",
