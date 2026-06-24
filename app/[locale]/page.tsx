@@ -31,7 +31,11 @@ export default async function HomePage({ params }: Props) {
       <Header dict={dict} locale={raw} />
       <main className="flex-1">
         <HeroSection dict={dict} locale={raw} />
-        <AppSignupSection dict={dict.appSignup} locale={raw} />
+        <AppSignupSection
+          dict={dict.appSignup}
+          locale={raw}
+          buttons={dict.common.buttons}
+        />
         <ProblemSection dict={dict.problem} />
         <SystemSection dict={dict.system} />
         <SubjectsSection dict={dict.subjects} common={dict.common} />
@@ -41,7 +45,7 @@ export default async function HomePage({ params }: Props) {
           dashboard={dict.dashboard}
         />
         <ServicesSection dict={dict.services} />
-        <PricingSection dict={dict} />
+        <PricingSection dict={dict} locale={raw} />
         <ProcessSection dict={dict.process} />
         <TestimonialsSection dict={dict.testimonials} />
         <VisionSection dict={dict.vision} />

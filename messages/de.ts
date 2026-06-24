@@ -32,14 +32,18 @@ export const de = {
 
   common: {
     brand: "Academigo",
-    heroCtaTitle: "Konto erstellen",
-    heroCtaSubtitle: "Für Schüler, Eltern und Lehrpersonen",
+    heroCtaTitle: "Loslegen",
+    heroCtaSubtitle: "Plattform öffnen, direkt registrieren oder Preise ansehen",
     minutes: "Minuten",
     perLesson: "pro Lektion",
     popular: "Beliebt",
     comingSoon: "Coming Soon",
     buttons: {
       freeConsultation: "Kostenlose Beratung",
+      openPlatform: "Zur Plattform",
+      registerHint: "Direkt registrieren auf app.academigo.xyz",
+      registerStudent: "Schüler/Eltern registrieren",
+      registerTeacher: "Lehrperson registrieren",
       viewPricing: "Preise ansehen",
       signUpStudent: "Schüler/Eltern registrieren",
       signUpTeacher: "Lehrperson registrieren",
@@ -201,7 +205,7 @@ export const de = {
         description: "Übungen mit klarem Ziel.",
       },
       {
-        title: "Sofortiges Feedback",
+        title: "Feedback",
         description: "Direkt nach jeder Antwort.",
       },
       {
@@ -213,7 +217,7 @@ export const de = {
         description: "Sieh, wo es hakt.",
       },
       {
-        title: "Prüfungsvorbereitung",
+        title: "Prüfung",
         description: "Gezielt üben fürs Examen.",
       },
     ],
@@ -266,59 +270,57 @@ export const de = {
   },
 
   pricing: {
-    title: "Preise",
-    perMonth: "Monat",
+    eyebrow: "Preise",
+    title: "Academigo Programme",
+    subtitle:
+      "Alle Preise in CHF. Einmaliger Kauf — keine Abos, keine Bindung.",
+    mostPopular: "Beliebteste Wahl",
     includedLabel: "Enthalten:",
+    creditSingular: "Credit",
+    creditPlural: "Credits",
+    perLesson: "pro Lektion",
+    cta: "Konto erstellen",
     tiers: [
       {
-        id: "essentials",
-        name: "Academigo Essentials",
-        tagline: "Für einzelne Themen und kurze Fragen",
-        description:
-          "Wenn du punktuell Hilfe brauchst oder ein Thema vertiefen willst.",
-        options: [
-          { id: "single", label: "Einzelstunde (50 Minuten)" },
-          { id: "pack5", label: "5er-Paket" },
-          { id: "pack10", label: "10er-Paket" },
-        ],
+        id: "starter",
+        kindLabel: "Flexibel",
+        name: "Academigo Starter",
+        tagline:
+          "Ideal für Schülerinnen und Schüler, die Unterstützung zu einem bestimmten Thema oder bei kurzfristiger Prüfungsvorbereitung benötigen.",
         features: [
-          "1:1-Betreuung",
+          "1 Lektion-Credit",
+          "Zugang zur Academigo-Plattform",
           "Online oder vor Ort",
-          "Plattform inklusive",
+          "Fortschrittsverfolgung",
         ],
-        cta: "Anfragen",
       },
       {
-        id: "plus",
-        name: "Academigo Plus",
-        tagline: "Regelmässig lernen, dranbleiben",
-        description: "Für alle, die kontinuierlich Fortschritte machen wollen.",
-        included: [
-          "4 Lektionen pro Monat",
-          "Persönlicher Lernplan",
-          "Plattform inklusive",
-          "Übungen nach Mass",
-          "Regelmässige Begleitung",
-          "Ziele werden laufend angepasst",
+        id: "focus",
+        kindLabel: "Beliebteste Wahl",
+        name: "Academigo Focus",
+        tagline:
+          "Ideal für Schülerinnen und Schüler, die sich auf Prüfungen vorbereiten oder gezielt Lernlücken schliessen möchten.",
+        savings: "CHF 20 sparen",
+        features: [
+          "5 Lektion-Credits",
+          "Zugang zur Academigo-Plattform",
+          "Online oder vor Ort",
+          "Fortschrittsverfolgung",
         ],
-        cta: "Starten",
       },
       {
         id: "excellence",
+        kindLabel: "Bestes Preis-Leistungs-Verhältnis",
         name: "Academigo Excellence",
-        tagline: "Intensive Begleitung",
-        description: "Für grosse Ziele und enge Betreuung.",
-        included: [
-          "8 Lektionen pro Monat",
-          "Persönlicher Lernplan",
-          "Eigene Lernstrategie",
-          "Regelmässige Fortschrittschecks",
-          "Plattform inklusive",
-          "Bevorzugte Termine",
-          "Übungen und Material",
-          "Langfristige Zielplanung",
+        tagline:
+          "Ideal für langfristige schulische Begleitung und kontinuierliche Weiterentwicklung.",
+        savings: "CHF 100 sparen",
+        features: [
+          "10 Lektion-Credits",
+          "Zugang zur Academigo-Plattform",
+          "Online oder vor Ort",
+          "Fortschrittsverfolgung",
         ],
-        cta: "Starten",
       },
     ],
   },

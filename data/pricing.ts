@@ -1,24 +1,22 @@
 /** Numeric pricing only — labels live in messages/{de,en}.ts */
 export const pricingAmounts = {
   tiers: [
+    { id: "starter", highlight: false, credits: 1, priceChf: 89 },
     {
-      id: "essentials",
-      highlight: false,
-      options: [
-        { id: "single", priceChf: 79 },
-        { id: "pack5", priceChf: 375 },
-        { id: "pack10", priceChf: 690 },
-      ],
-    },
-    {
-      id: "plus",
-      priceChf: 299,
+      id: "focus",
       highlight: true,
+      credits: 5,
+      priceChf: 425,
+      pricePerLessonChf: 85,
+      savingsChf: 20,
     },
     {
       id: "excellence",
-      priceChf: 549,
       highlight: false,
+      credits: 10,
+      priceChf: 790,
+      pricePerLessonChf: 79,
+      savingsChf: 100,
     },
   ],
 } as const;

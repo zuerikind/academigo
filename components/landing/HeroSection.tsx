@@ -1,13 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { SignUpCtaGroup } from "@/components/layout/SignUpCtaGroup";
-import { Button } from "@/components/ui/Button";
+import { LandingCtaPanel } from "@/components/landing/LandingCtaPanel";
 import { Container } from "@/components/ui/Container";
 import { DashboardMockup } from "@/components/ui/DashboardMockup";
 import { TrustStats } from "@/components/ui/TrustStats";
-import { localePath } from "@/lib/i18n/navigation";
-import { siteConfig } from "@/config/site";
 import type { Locale } from "@/lib/i18n/config";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 import type { Dictionary } from "@/messages/types";
@@ -35,32 +32,13 @@ function HeroCopy({
       <p className="text-body mt-4">{hero.subjects}</p>
       <p className="text-body mt-2">{hero.location}</p>
 
-      <div className="mt-9 rounded-2xl border-2 border-academy-line bg-white p-5 shadow-card sm:p-6">
-        <p className="text-sm font-semibold text-academy-navy">
-          {common.heroCtaTitle}
-        </p>
-        <p className="text-caption mt-1">{common.heroCtaSubtitle}</p>
-        <div className="mt-5">
-          <SignUpCtaGroup
-            locale={locale}
-            labels={{
-              student: common.buttons.signUpStudent,
-              teacher: common.buttons.signUpTeacher,
-            }}
-            vertical
-          />
-        </div>
-        <div className="mt-4 border-t border-academy-line pt-4">
-          <Button
-            href={`${localePath(locale)}${siteConfig.links.pricesAnchor}`}
-            variant="outline"
-            size="md"
-            fullWidth
-          >
-            {common.buttons.viewPricing}
-          </Button>
-        </div>
-      </div>
+      <LandingCtaPanel
+        locale={locale}
+        buttons={common.buttons}
+        title={common.heroCtaTitle}
+        subtitle={common.heroCtaSubtitle}
+        className="mt-9"
+      />
 
       <div className="mt-10 border-t border-academy-line pt-8">
         <TrustStats items={hero.trust} />

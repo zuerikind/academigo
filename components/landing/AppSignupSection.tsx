@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SignUpCtaGroup } from "@/components/layout/SignUpCtaGroup";
+import { LandingCtaPanel } from "@/components/landing/LandingCtaPanel";
 import { Container } from "@/components/ui/Container";
 import { appLoginUrl } from "@/lib/app-links";
 import type { Locale } from "@/lib/i18n/config";
@@ -8,9 +8,11 @@ import type { Dictionary } from "@/messages/types";
 export function AppSignupSection({
   dict,
   locale,
+  buttons,
 }: {
   dict: Dictionary["appSignup"];
   locale: Locale;
+  buttons: Dictionary["common"]["buttons"];
 }) {
   return (
     <section
@@ -45,13 +47,10 @@ export function AppSignupSection({
                 </Link>
               </p>
             </div>
-            <SignUpCtaGroup
+            <LandingCtaPanel
               locale={locale}
-              labels={{
-                student: dict.signUpStudent,
-                teacher: dict.signUpTeacher,
-              }}
-              vertical
+              buttons={buttons}
+              className="rounded-2xl border border-academy-line bg-academy-paper-soft p-5 sm:p-6"
             />
           </div>
         </div>

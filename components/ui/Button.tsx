@@ -9,7 +9,7 @@ type ButtonVariant =
   | "outlineLight"
   | "ghost"
   | "link";
-type ButtonSize = "sm" | "md" | "lg";
+type ButtonSize = "sm" | "md" | "lg" | "xl";
 type ButtonShape = "rounded" | "pill";
 
 const variants: Record<ButtonVariant, string> = {
@@ -37,6 +37,7 @@ const sizes: Record<ButtonSize, string> = {
   sm: "min-h-9 px-4 text-[13px] gap-1.5 font-semibold",
   md: "min-h-11 px-5 text-sm gap-2 font-semibold",
   lg: "min-h-12 px-6 text-[15px] gap-2 font-semibold",
+  xl: "min-h-14 px-8 text-lg gap-2.5 font-bold shadow-lg",
 };
 
 type ButtonProps = {

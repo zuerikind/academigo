@@ -12,3 +12,12 @@ export function appSignupUrl(locale: Locale, role: "student" | "teacher") {
 export function appLoginUrl(locale: Locale) {
   return `${appOrigin()}/${locale}/login`;
 }
+
+/** Main app entry (marketing primary CTA). */
+export function appHomeUrl(locale: Locale) {
+  return `${appOrigin()}/${locale}`;
+}
+
+export function appPricingUrl(locale: Locale) {
+  return `${appOrigin()}/${locale}/pricing`;
+}

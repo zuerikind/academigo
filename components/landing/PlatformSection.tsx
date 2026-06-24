@@ -41,26 +41,23 @@ export function PlatformSection({
       centered={false}
       headerClassName="max-w-2xl text-left"
     >
-      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,400px)_1fr] lg:gap-10 xl:gap-12">
+      <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-10 xl:grid-cols-[minmax(0,360px)_1fr] xl:gap-12">
         <aside className="min-w-0 lg:sticky lg:top-28">
-          <div className="rounded-2xl border border-academy-line bg-white p-5 shadow-card sm:p-6">
-            <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+          <div className="rounded-2xl border border-academy-line bg-white p-4 shadow-card sm:p-5">
+            <ul className="grid grid-cols-2 gap-2 sm:gap-2.5">
               {dict.features.map((feature, index) => {
                 const Icon = featureIcons[index];
                 return (
-                  <li key={feature.title}>
-                    <div className="group flex h-full items-start gap-3 rounded-xl border border-academy-line bg-white px-3.5 py-3.5 transition-colors hover:border-[color-mix(in_srgb,var(--brand)_35%,transparent)] hover:bg-fill-brand-tint">
-                      <IconBox
-                        size="sm"
-                        className="shrink-0 transition-colors group-hover:bg-[color-mix(in_srgb,var(--brand)_12%,white)]"
-                      >
+                  <li key={feature.title} className="min-w-0">
+                    <div className="flex h-full min-w-0 flex-col gap-2.5 rounded-xl border border-academy-line/90 bg-academy-paper-soft p-3 transition-colors hover:bg-fill-brand-tint sm:p-3.5">
+                      <IconBox size="sm" className="shrink-0">
                         <Icon strokeWidth={1.75} aria-hidden />
                       </IconBox>
                       <div className="min-w-0 flex-1">
-                        <p className="text-sm font-semibold leading-snug text-academy-navy">
+                        <p className="text-[12px] font-semibold leading-snug text-academy-navy sm:text-[13px]">
                           {feature.title}
                         </p>
-                        <p className="mt-1 text-[13px] leading-snug text-[var(--academy-graphite)]">
+                        <p className="mt-1 text-[11px] leading-snug text-[var(--academy-graphite)] sm:text-xs">
                           {feature.description}
                         </p>
                       </div>
@@ -69,7 +66,7 @@ export function PlatformSection({
                 );
               })}
             </ul>
-            <div className="mt-5 border-t border-academy-line pt-5">
+            <div className="mt-4 border-t border-academy-line-strong pt-4 sm:mt-5 sm:pt-5">
               <Button
                 href={siteConfig.links.platform}
                 external
